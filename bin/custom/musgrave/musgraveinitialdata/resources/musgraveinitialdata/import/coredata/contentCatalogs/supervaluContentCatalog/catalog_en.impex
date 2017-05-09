@@ -17,4 +17,4 @@ $lang=en
 
 # Create Content Catalog
 UPDATE ContentCatalog;id[unique=true];name[lang=$lang]
- ;supervaluContentCatalog;"Electronics Content Catalog"
+ ;supervaluContentCatalog;"Super Valu Content Catalog"
