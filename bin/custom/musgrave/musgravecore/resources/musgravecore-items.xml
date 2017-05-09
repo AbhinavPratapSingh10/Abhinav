@@ -112,6 +112,69 @@
 				</attributes>
 			</itemtype>
 		</typegroup>
+		
+		<typegroup name="SuperValu">
+		
+		<itemtype code="SuperValuWineProduct" extends="Product"
+				autocreate="true" generate="true">
+				<description>Extending the Product type from core.</description>
+				<deployment table="SuperValuWineProduct" typecode="11000" />
+				<attributes>
+					<attribute qualifier="country" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="brand" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="year" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true" />
+						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="region" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true" />
+						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="grape" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<defaultvalue>true</defaultvalue>
+						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="style" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="goeswellwith" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="tastingnotes" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<persistence type="property" />
+					</attribute>					                  
+				</attributes>
+			</itemtype>
+			
+			<itemtype code="Category" autocreate="false" generate="false">
+				<description>Extending the Category for lead time attribute.</description>
+				<attributes>
+					<attribute qualifier="startDate" type="java.util.Date">
+						<modifiers read="true" write="true" search="true"
+							optional="true" />
+						<persistence type="property" />
+						<description>Attribute is used to set Start Date for each Category.</description>
+					</attribute>
+					<attribute qualifier="endDate" type="java.util.Date" >
+						<modifiers read="true" write="true" search="true"
+							optional="true" />
+						<persistence type="property" />
+						<description>Attribute is used to set End Date for each Category.</description>
+					</attribute>
+				</attributes>
+			</itemtype>
+			
+			</typegroup>
 
 	</itemtypes>
 </items>
