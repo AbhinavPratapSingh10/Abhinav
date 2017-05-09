@@ -8,7 +8,7 @@
  * Information and shall use it only in accordance with the terms of the
  * license agreement you entered into with SAP.
  */
-package com.SUPERVALU.initialdata.setup;
+package com.musgrave.initialdata.setup;
 
 import de.hybris.platform.commerceservices.dataimport.impl.CoreDataImportService;
 import de.hybris.platform.commerceservices.dataimport.impl.SampleDataImportService;
