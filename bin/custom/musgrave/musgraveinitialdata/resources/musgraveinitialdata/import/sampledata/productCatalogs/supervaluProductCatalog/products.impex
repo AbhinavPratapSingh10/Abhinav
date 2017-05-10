@@ -11,13 +11,28 @@
 # ImpEx for Importing Products
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
+$productCatalog=supervaluProductCatalog
+
+
+INSERT_UPDATE Unit;unitType[unique=true];code[unique=true];name[lang=en];conversion;;;
+;bottles;bottles;bottles;1
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $supercategories=supercategories(code, $catalogVersion)
 $baseProduct=baseProduct(code,$catalogVersion)
 $approved=approvalstatus(code)[default='check']
 
+$lang=en
+
 # Insert Products
-INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
+INSERT_UPDATE Product;code[unique=true];$supercategories;unit(code);$catalogVersion;$approved;name[lang=$lang];summary[lang=$lang];description[lang=$lang];brand;year;region;grape;style;goeswellwith;tastingnotes;
+;1023644000;100,200;bottles;;;Aresti Bellavista Cabernet Sauvignon (75 Centilitre);"This Cabernet Sauvignon is a complex wine with sweet aromas of red fruits and notes of vanilla due to their aging in barrels. It is a good bodied, balanced and tasty wine. Maximum fruit expression lies a journey through Chile in search of the perfect combination between valley and grape";"This Cabernet Sauvignon is a complex wine with sweet aromas of red fruits and notes of vanilla due to their aging in barrels. It is a good bodied, balanced and tasty wine. Maximum fruit expression lies a journey through Chile in search of the perfect combination between valley and grape";Aresti;1980;Cork;Cabernet Sauvignon;Full-Bodied Red Wines;Cheese;Blackcurrant Cordial;
+;1440295000;100,200;bottles;;;Barossa Valley Estate Grenache Shiraz Mourvedre (75 Centilitre);"Our wines capture the distinctive elegance, finesse and vibrant fruit flavours of one of the world's most celebrated wine regions. Welcome to the Barossa Valley.";"Our wines capture the distinctive elegance, finesse and vibrant fruit flavours of one of the world's most celebrated wine regions. Welcome to the Barossa Valley.";Barossa Valley Estate;1981;Kerry;Chardonnay;Medium-Bodied Red Wines;Pasta;Cassis;
+;1016059001;100,300;bottles;;;Aresti Special Release Sauvignon Blanc (75 Centilitre);"This Sauvignon Blanc has a bright, greenish color with some elegant floral notes, citrus fruit and a hint of herbs. The palate has a firm acidity and pleasantly fills the palate, leading to a nice, persistent aftertaste. This wine is ideally served with salmon or sea food. Maximum fruit expression lies a journey through Chile in search of the perfect combination between valley and grape";"This Sauvignon Blanc has a bright, greenish color with some elegant floral notes, citrus fruit and a hint of herbs. The palate has a firm acidity and pleasantly fills the palate, leading to a nice, persistent aftertaste. This wine is ideally served with salmon or sea food. Maximum fruit expression lies a journey through Chile in search of the perfect combination between valley and grape";Aresti;1982;Tipperary;Grenache;Full-Bodied White Wines;Pizza;Roasted Coffee Beans;
+;1269419000;100,300;bottles;;;Barefoot Cellars Pinot Grigio (75 Centilitre);"Barefoot Pinot Grigio is crisp and full of citrus and peach flavours. Goes well with chicken, seafood, spicy pasta and pizzas.";"Barefoot Pinot Grigio is crisp and full of citrus and peach flavours. Goes well with chicken, seafood, spicy pasta and pizzas.";Barefoot;1986;Meath;Rioja;Light-Bodied White Wines;Lamb;Ripe red berries;
+;1444579000;100,400;bottles;;;McGuigan Frizzante (75 Centilitre);"Crafted from some of the finest fruit found in Australia's sunny climate, this Frizzante is full of lively, little bubbles and lovely soft lemon and apple fruit character. It is fantastically refreshing and works brilliantly as an aperitif or as part of any celebration. Aerated semi-sparkling wine of Australia obtained by adding carbon dioxide";"Crafted from some of the finest fruit found in Australia's sunny climate, this Frizzante is full of lively, little bubbles and lovely soft lemon and apple fruit character. It is fantastically refreshing and works brilliantly as an aperitif or as part of any celebration. Aerated semi-sparkling wine of Australia obtained by adding carbon dioxide";McGuigan;1983;Waterford;Malbec;Dessert & Fortified Wines;Game;Cedar;
+;1405824000;100,400;bottles;;;Blossom Hill Rose Sparkling Zinfandel (75 Centilitre);"Blossom Hill Winemaker's Reserve Sparkling Zinfandel 75cl";"Blossom Hill Winemaker's Reserve Sparkling Zinfandel 75cl";Blossom Hill;1986;Cork;Semillon;Dessert & Fortified Wines;Cheese;Cedar;
+;1017027000;100,500;bottles;;;A Winter's Tale Amontillado Sherry (750 Millilitre);"Williams & Humbert A Winter's Tale Amontillado Sherry 750ml";"Williams & Humbert A Winter's Tale Amontillado Sherry 750ml";Williams & Humbert;1984;Clare;Merlot;Rosé Wines;Beef;Liquorice;
+;1005415000;100,500;bottles;;;Cockburns Fine Ruby Port (75 Centilitre);"Cockburn's Fine Ruby is full-bodied Port with ripe red-fruit flavours, balanced with a fine structure and balance. Perfect at the end of a fine dinner or simply to enjoy with friends.";"Cockburn's Fine Ruby is full-bodied Port with ripe red-fruit flavours, balanced with a fine structure and balance. Perfect at the end of a fine dinner or simply to enjoy with friends.";Cockburn's;1984;Kerry;Merlot;Aromatic White Wines;Pasta;Cassis;
+;1201595000;100,600;bottles;;;Barefoot Wine (75 Centilitre);"Barefoot White Zinfandel is packed with seriously lush pineapple and strawberry and tastes deliciously fruity. Great served chilled with appetisers, summer fruits, chicken, seafood and cheeses.";"Barefoot White Zinfandel is packed with seriously lush pineapple and strawberry and tastes deliciously fruity. Great served chilled with appetisers, summer fruits, chicken, seafood and cheeses.";Barefoot;1985;Wexford;Pinot Noir;Rosé Wines;chicken;Green Pepper;
+;1010016001;100,600;bottles;;;Mateus The Original Rosé (75 Centilitre);"Young, fresh, fruity and versatile wine.";"Young, fresh, fruity and versatile wine.";Mateus;1988;Louth;Rioja;Rosé Wines;chicken;Herbs;
