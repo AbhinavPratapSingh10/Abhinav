@@ -1,0 +1,295 @@
+$contentCatalog=shopriteContentCatalog
+$contentCatalogName=Shoprite Content Catalog
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$productCatalog=electronicsProductCatalog
+$productCatalogName=Electronics Product Catalog
+$productCV=catalogVersion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$picture=media(code, $contentCV);
+$siteResource=jar:com.shoprite.initialdata.constants.ShopriteInitialDataConstants&/shopriteinitialdata/import/sampledata/contentCatalogs/$contentCatalog
+$medias=medias(code, $contentCV);
+$lang=en
+$mediaContainer=media(qualifier, $contentCV)[lang=$lang];
+
+
+###  Home page splash   #######
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;mobile;Elec_480x320_HomeSpeed_EN_01_480W.jpg;$siteResource/images/banners/homepage/responsive/Elec_480x320_HomeSpeed_EN_01_480W.jpg;Elec_480x320_HomeSpeed_EN_01_480W.jpg;"Save Big On Select SLR & DSLR Cameras";
+;tablet;Elec_770x350_HomeSpeed_EN_01_770W.jpg;$siteResource/images/banners/homepage/responsive/Elec_770x350_HomeSpeed_EN_01_770W.jpg;Elec_770x350_HomeSpeed_EN_01_770W.jpg;"Save Big On Select SLR & DSLR Cameras";
+;desktop;Elec_960x330_HomeSpeed_EN_01_960W.jpg;$siteResource/images/banners/homepage/responsive/Elec_960x330_HomeSpeed_EN_01_960W.jpg;Elec_960x330_HomeSpeed_EN_01_960W.jpg;"Save Big On Select SLR & DSLR Cameras";
+;widescreen;Elec_1400x440_HomeSpeed_EN_01_1400W.jpg;$siteResource/images/banners/homepage/responsive/Elec_1400x440_HomeSpeed_EN_01_1400W.jpg;Elec_1400x440_HomeSpeed_EN_01_1400W.jpg;"Save Big On Select SLR & DSLR Cameras";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-spalsh-en;Elec_480x320_HomeSpeed_EN_01_480W.jpg,Elec_770x350_HomeSpeed_EN_01_770W.jpg,Elec_960x330_HomeSpeed_EN_01_960W.jpg,Elec_1400x440_HomeSpeed_EN_01_1400W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageSplashBannerComponent;electronics-homepage-spalsh-en
+
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;mobile;Elec_480x118_HomeDiscount_EN_01_480W.jpg;$siteResource/images/banners/homepage/responsive/Elec_480x118_HomeDiscount_EN_01_480W.jpg;Elec_480x118_HomeDiscount_EN_01_480W.jpg;"Save Big on Select Camera Accessories & Supplies";
+;tablet;Elec_770x80_HomeDiscount_EN_01_770W.jpg;$siteResource/images/banners/homepage/responsive/Elec_770x80_HomeDiscount_EN_01_770W.jpg;Elec_770x80_HomeDiscount_EN_01_770W.jpg;"Save Big on Select Camera Accessories & Supplies";
+;desktop;Elec_960x80_HomeDiscount_EN_01_960W.jpg;$siteResource/images/banners/homepage/responsive/Elec_960x80_HomeDiscount_EN_01_960W.jpg;Elec_960x80_HomeDiscount_EN_01_960W.jpg;"Save Big on Select Camera Accessories & Supplies";
+;widescreen;Elec_1400x80_HomeDiscount_EN_01_1400W.jpg;$siteResource/images/banners/homepage/responsive/Elec_1400x80_HomeDiscount_EN_01_1400W.jpg;Elec_1400x80_HomeDiscount_EN_01_1400W.jpg;"Save Big on Select Camera Accessories & Supplies";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-discount-en;Elec_480x118_HomeDiscount_EN_01_480W.jpg,Elec_770x80_HomeDiscount_EN_01_770W.jpg,Elec_960x80_HomeDiscount_EN_01_960W.jpg,Elec_1400x80_HomeDiscount_EN_01_1400W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageDiscountBannerComponent;electronics-homepage-discount-en;
+
+###  Home page slot 2A  ####
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;tablet;Elec_200x150_HomeFam_EN_01_200W.jpg;$siteResource/images/banners/homepage/responsive/Elec_200x150_HomeFam_EN_01_200W.jpg;Elec_200x150_HomeFam_EN_01_200W.jpg;"Compact Cameras";
+;desktop;Elec_240x180_HomeFam_EN_01_240W.jpg;$siteResource/images/banners/homepage/responsive/Elec_240x180_HomeFam_EN_01_240W.jpg;Elec_240x180_HomeFam_EN_01_240W.jpg;"Compact Cameras";
+;widescreen;Elec_350x262_HomeFam_EN_01_350W.jpg;$siteResource/images/banners/homepage/responsive/Elec_350x262_HomeFam_EN_01_350W.jpg;Elec_350x262_HomeFam_EN_01_350W.jpg;"Compact Cameras";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-light-fam-en;Elec_200x150_HomeFam_EN_01_200W.jpg,Elec_240x180_HomeFam_EN_01_240W.jpg,Elec_350x262_HomeFam_EN_01_350W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageLightFamBannerComponent;electronics-homepage-light-fam-en
+
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;tablet;Elec_200x150_HomeFamLight_EN_01_200W.jpg;$siteResource/images/banners/homepage/responsive/Elec_200x150_HomeFamLight_EN_01_200W.jpg;Elec_200x150_HomeFamLight_EN_01_200W.jpg;"Camera Lenses";
+;desktop;Elec_240x180_HomeFamLight_EN_01_240W.jpg;$siteResource/images/banners/homepage/responsive/Elec_240x180_HomeFamLight_EN_01_240W.jpg;Elec_240x180_HomeFamLight_EN_01_240W.jpg;"Camera Lenses";
+;widescreen;Elec_350x262_HomeFamLight_EN_01_350W.jpg;$siteResource/images/banners/homepage/responsive/Elec_350x262_HomeFamLight_EN_01_350W.jpg;Elec_350x262_HomeFamLight_EN_01_350W.jpg;"Camera Lenses";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-light-text-en;Elec_200x150_HomeFamLight_EN_01_200W.jpg,Elec_240x180_HomeFamLight_EN_01_240W.jpg,Elec_350x262_HomeFamLight_EN_01_350W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageLightFamTextBannerComponent;electronics-homepage-light-text-en
+
+#### Home section 2B #######
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;tablet;Elec_200x150_HomeKid_EN_01_200W.jpg;$siteResource/images/banners/homepage/responsive/Elec_200x150_HomeKid_EN_01_200W.jpg;Elec_200x150_HomeKid_EN_01_200W.jpg;"Power Supplies";
+;desktop;Elec_240x180_HomeKid_EN_01_240W.jpg;$siteResource/images/banners/homepage/responsive/Elec_240x180_HomeKid_EN_01_240W.jpg;Elec_240x180_HomeKid_EN_01_240W.jpg;"Power Supplies";
+;widescreen;Elec_350x262_HomeKid_EN_01_350W.jpg;$siteResource/images/banners/homepage/responsive/Elec_350x262_HomeKid_EN_01_350W.jpg;Elec_350x262_HomeKid_EN_01_350W.jpg;"Power Supplies";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-camcorders-en;Elec_200x150_HomeKid_EN_01_200W.jpg,Elec_240x180_HomeKid_EN_01_240W.jpg,Elec_350x262_HomeKid_EN_01_350W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageCamcordersBannerComponent;electronics-homepage-camcorders-en
+
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;tablet;Elec_200x150_HomeCaptureFirst_EN_01_200W.jpg;$siteResource/images/banners/homepage/responsive/Elec_200x150_HomeCaptureFirst_EN_01_200W.jpg;Elec_200x150_HomeCaptureFirst_EN_01_200W.jpg;"Camcorders";
+;desktop;Elec_240x180_HomeCaptureFirst_EN_01_240W.jpg;$siteResource/images/banners/homepage/responsive/Elec_240x180_HomeCaptureFirst_EN_01_240W.jpg;Elec_240x180_HomeCaptureFirst_EN_01_240W.jpg;"Camcorders";
+;widescreen;Elec_350x262_HomeCaptureFirst_EN_01_350W.jpg;$siteResource/images/banners/homepage/responsive/Elec_350x262_HomeCaptureFirst_EN_01_350W.jpg;Elec_350x262_HomeCaptureFirst_EN_01_350W.jpg;"Camcorders";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-camcorders-02-en;Elec_200x150_HomeCaptureFirst_EN_01_200W.jpg,Elec_240x180_HomeCaptureFirst_EN_01_240W.jpg,Elec_350x262_HomeCaptureFirst_EN_01_350W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageCamcordersChildBannerComponent;electronics-homepage-camcorders-02-en
+### Section 4
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;tablet;Elec_200x200_HomeSmallDiscount_EN_01_200W.jpg;$siteResource/images/banners/homepage/responsive/Elec_200x200_HomeSmallDiscount_EN_01_200W.jpg;Elec_200x200_HomeSmallDiscount_EN_01_200W.jpg;"Canyon Web Camera 100KpxelIM CMOS";
+;desktop;Elec_240x240_HomeSmallDiscount_EN_01_240W.jpg;$siteResource/images/banners/homepage/responsive/Elec_240x240_HomeSmallDiscount_EN_01_240W.jpg;Elec_240x240_HomeSmallDiscount_EN_01_240W.jpg;"Canyon Web Camera 100KpxelIM CMOS";
+;widescreen;Elec_350x350_HomeSmallDiscount_EN_01_350W.jpg;$siteResource/images/banners/homepage/responsive/Elec_350x350_HomeSmallDiscount_EN_01_350W.jpg;Elec_350x350_HomeSmallDiscount_EN_01_350W.jpg;"Canyon Web Camera 100KpxelIM CMOS";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-sm-discount-en;Elec_200x200_HomeSmallDiscount_EN_01_200W.jpg,Elec_240x240_HomeSmallDiscount_EN_01_240W.jpg,Elec_350x350_HomeSmallDiscount_EN_01_350W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageSmDiscountBannerComponent;electronics-homepage-sm-discount-en
+
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;tablet;Elec_200x200_HomeShop_EN_01_200W.jpg;$siteResource/images/banners/homepage/responsive/Elec_200x200_HomeShop_EN_01_200W.jpg;Elec_200x200_HomeShop_EN_01_200W.jpg;"Logitech QuickCam for Notebook Pro";
+;desktop;Elec_240x240_HomeShop_EN_01_240W.jpg;$siteResource/images/banners/homepage/responsive/Elec_240x240_HomeShop_EN_01_240W.jpg;Elec_240x240_HomeShop_EN_01_240W.jpg;"Logitech QuickCam for Notebook Pro";
+;widescreen;Elec_350x350_HomeShop_EN_01_350W.jpg;$siteResource/images/banners/homepage/responsive/Elec_350x350_HomeShop_EN_01_350W.jpg;Elec_350x350_HomeShop_EN_01_350W.jpg;"Logitech QuickCam for Notebook Pro";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-shop-en;Elec_200x200_HomeShop_EN_01_200W.jpg,Elec_240x240_HomeShop_EN_01_240W.jpg,Elec_350x350_HomeShop_EN_01_350W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageShopBannerComponent;electronics-homepage-shop-en
+
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;tablet;Elec_200x200_HomeShipment_EN_01_200W.jpg;$siteResource/images/banners/homepage/responsive/Elec_200x200_HomeShipment_EN_01_200W.jpg;Elec_200x200_HomeShipment_EN_01_200W.jpg;"Samsung NV10 Compact Camera";
+;desktop;Elec_240x240_HomeShipment_EN_01_240W.jpg;$siteResource/images/banners/homepage/responsive/Elec_240x240_HomeShipment_EN_01_240W.jpg;Elec_240x240_HomeShipment_EN_01_240W.jpg;"Samsung NV10 Compact Camera";
+;widescreen;Elec_350x350_HomeShipment_EN_01_350W.jpg;$siteResource/images/banners/homepage/responsive/Elec_350x350_HomeShipment_EN_01_350W.jpg;Elec_350x350_HomeShipment_EN_01_350W.jpg;"Samsung NV10 Compact Camera";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-shipment-en;Elec_200x200_HomeShipment_EN_01_200W.jpg,Elec_240x240_HomeShipment_EN_01_240W.jpg,Elec_350x350_HomeShipment_EN_01_350W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageShipmentBannerComponent;electronics-homepage-shipment-en
+
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;tablet;Elec_200x200_HomeService_EN_01_200W.jpg;$siteResource/images/banners/homepage/responsive/Elec_200x200_HomeService_EN_01_200W.jpg;Elec_200x200_HomeService_EN_01_200W.jpg;"Sony Light HVL-20DW2";
+;desktop;Elec_240x240_HomeService_EN_01_240W.jpg;$siteResource/images/banners/homepage/responsive/Elec_240x240_HomeService_EN_01_240W.jpg;Elec_240x240_HomeService_EN_01_240W.jpg;"Sony Light HVL-20DW2";
+;widescreen;Elec_350x350_HomeService_EN_01_350W.jpg;$siteResource/images/banners/homepage/responsive/Elec_350x350_HomeService_EN_01_350W.jpg;Elec_350x350_HomeService_EN_01_350W.jpg;"Sony Light HVL-20DW2";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-service-en;Elec_200x200_HomeService_EN_01_200W.jpg,Elec_240x240_HomeService_EN_01_240W.jpg,Elec_350x350_HomeService_EN_01_350W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageServiceBannerComponent;electronics-homepage-service-en
+
+
+### Section 5
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images]
+;mobile;Elec_475x119_HomeFreeDel_EN_01_475W.jpg;$siteResource/images/banners/homepage/responsive/Elec_475x119_HomeFreeDel_EN_01_475W.jpg;Elec_475x119_HomeFreeDel_EN_01_475W.jpg;"Free Shipping on All Orders This Weekend";
+;tablet;Elec_770x50_HomeFreeDel_EN_01_770W.jpg;$siteResource/images/banners/homepage/responsive/Elec_770x50_HomeFreeDel_EN_01_770W.jpg;Elec_770x50_HomeFreeDel_EN_01_770W.jpg;"Free Shipping on All Orders This Weekend";
+;desktop;Elec_960x50_HomFreeDel_EN_01_960W.jpg;$siteResource/images/banners/homepage/responsive/Elec_960x50_HomFreeDel_EN_01_960W.jpg;Elec_960x50_HomFreeDel_EN_01_960W.jpg;"Free Shipping on All Orders This Weekend";
+;widescreen;Elec_1400x50_HomeFreeDel_EN_01_1400W.jpg;$siteResource/images/banners/homepage/responsive/Elec_1400x50_HomeFreeDel_EN_01_1400W.jpg;Elec_1400x50_HomeFreeDel_EN_01_1400W.jpg;"Free Shipping on All Orders This Weekend";	
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-homepage-free-del-en;Elec_475x119_HomeFreeDel_EN_01_475W.jpg,Elec_770x50_HomeFreeDel_EN_01_770W.jpg,Elec_960x50_HomFreeDel_EN_01_960W.jpg,Elec_1400x50_HomeFreeDel_EN_01_1400W.jpg	
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsHompageFreeDelBannerComponent;electronics-homepage-free-del-en
+
+# CMS Paragraph Component (Contact information)
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang];
+;;faqTextParagraph;"<a name='00'></a><div class=""textpage textpage-faqs""><div class=""item_container""><p><span style='font-size: x-large;'><strong>Frequently Asked Questions</strong></span></p><a name='a00'></a><p class='MsoNormal'><b><span lang='EN-ZA'>What is Click &amp; Collect?</span></b></p><p class='MsoNormal'><span lang='EN-ZA'>Checkers Click &amp; Collect is a free service which allows you to place orders on-line for party platters every day and for bulk wines when promotions are active.</span></p><p class='MsoNormal'><span lang='EN-ZA'>It is ideal for customers who want to collect freshly prepared party platters for a function or for those who would like to take advantage of our famous Wine Route promotions in order to buy wines in bulk.<o:p></o:p></span></p><a name='b00'></a><p class='MsoNormal'><b><span lang='EN-ZA'>Which stores offer Checkers Click &amp; Collect?<o:p></o:p></span></b></p><p class='MsoNormal'><span lang='EN-ZA'>The Click &amp; Collect service is available at all Checkers and Checkers Hyper stores in South Africa.</span></p><p class='MsoNormal'><span lang='EN-ZA'>Regrettably wines are by law not allowed to be sold in supermarkets in the Eastern Cape, but we&rsquo;ll try our level best to accommodate any orders through the Checkers LiquorShops. By exception wines are not available at Checkers supermarkets where grocer wine licenses have not been issued as yet.<br /><b><br /><a name='c00'></a>Why do I need to book a time slot?</b></span></p><p class='MsoNormal'><span lang='EN-ZA'>To ensure your party platters are freshly prepared for your function and that bulk wines are ordered especially for you, picked and ready for collection upon your arrival.<br /><br /><a name='d00'></a><b>What if I am late for collection?</b></span></p><p class='MsoNormal'><span lang='EN-ZA'>Don&rsquo;t worry if you are delayed. </span></p><p class='MsoNormal'><span lang='EN-ZA'>The freshly prepared party platters will be kept aside for two hours after the selected collection time, but we will be in-touch to make sure you are still on your way.</span></p><p class='MsoNormal'><span lang='EN-ZA'>Bulk wine orders will be kept for seven days after the selected collection date.</span></p><a name='e00'></a><p class='MsoNormal'><b><span lang='EN-ZA'>Where do I go in store to collect my orders?</span></b></p><p class='MsoNormal'><span lang='EN-ZA'>Please go to the Branch Manager&rsquo;s office and provide your order number to the manager on duty, who will immediately attend to your order.<br /><br /><a name='f00'></a><b>Why are there different lead times for different items?<o:p></o:p></b></span></p><p class='MsoNormal'><span lang='EN-ZA'>Party platters are freshly prepared in store and can be made 24 hours&rsquo; notice. <br /><br />If we do not have enough stock to fulfil your bulk promotional wines order it will be especially ordered for you and then can take up to seven days to be delivered. </span></p><p class='MsoNormal'><span lang='EN-ZA'>If there are any unforeseen delays we will be in touch with you to conform a new collection date.</span></p><p class='MsoNormal'><span lang='EN-ZA'><br /><a name='g00'></a><b>Can I add products to my order when I come in to collect?</b></span></p><p class='MsoNormal'><span lang='EN-ZA'>Certainly, all items are paid for in store and can be added to your shopping basket and paid for at any one of the cashiers.<o:p></o:p></span></p><a name='h00'></a><p class='MsoNormal'><b><span lang='EN-ZA'>Can I pay online? </span></b></p><p class='MsoNormal'><span lang='EN-ZA'>Regrettably not in this point in time. <br />All goods are to be paid for at any one of the cashiers.<o:p></o:p></span></p><a name='i00'></a><p class='MsoNormal'><b><span lang='EN-ZA'>What does it cost?<br /></span></b><span lang='EN-ZA'>The service is offered for free. <br /><br />Your feedback on how we could improve the Checkers Click &amp; Collect service is welcome. Kindly phone us toll-free at Checkline on 0800 01 07 09.<o:p></o:p></span></p><p class='MsoNormal'><span lang='EN-ZA'>&nbsp;<o:p></o:p></span></p></div></div>"
+
+# Site Logo Component
+UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+;;SiteLogoComponent;/images/theme/logo-checkers-responsive.png
+
+##### DSLR Category Page ######
+
+##### Section 1
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;mobile;wine_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/wine_mobile.jpg;wine_mobile.jpg;"Order wine"
+;tablet;wine_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/wine_tablet.jpg;wine_tablet.jpg;"Order wine"
+;desktop;wine_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/wine_desktop.jpg;wine_desktop.jpg;"Order wine"
+
+;mobile;whisky_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/whisky_mobile.jpg;whisky_mobile.jpg;"Order Whisky"
+;tablet;whisky_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/whisky_tablet.jpg;whisky_tablet.jpg;"Order Whisky"
+;desktop;whisky_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/whisky_desktop.jpg;whisky_desktop.jpg;"Order Whisky"
+
+;mobile;baskets_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/baskets_mobile.jpg;baskets_mobile.jpg;"Order baskets"
+;tablet;baskets_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/baskets_tablet.jpg;baskets_tablet.jpg;"Order baskets"
+;desktop;baskets_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/baskets_desktop.jpg;baskets_desktop.jpg;"Order baskets"
+
+;mobile;platters_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/platters_mobile.jpg;platters_mobile.jpg;"Order platters"
+;tablet;platters_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/platters_tablet.jpg;platters_tablet.jpg;"Order platters"
+;desktop;platters_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/platters_desktop.jpg;platters_desktop.jpg;"Order platters"
+
+;mobile;auction_wine_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/auction_wine_mobile.jpg;auction_wine_mobile.jpg;"Order Auction Wine"
+;tablet;auction_wine_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/auction_wine_tablet.jpg;auction_wine_tablet.jpg;"Order Auction Wine"
+;desktop;auction_wine_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/auction_wine_desktop.jpg;auction_wine_desktop.jpg;"Order Auction Wine"
+
+;mobile;plp_baskets_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/plp_baskets_mobile.jpg;plp_baskets_mobile.jpg;"Order baskets"
+;tablet;plp_baskets_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/plp_baskets_tablet.jpg;plp_baskets_tablet.jpg;"Order baskets"
+;desktop;plp_baskets_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/plp_baskets_desktop.jpg;plp_baskets_desktop.jpg;"Order baskets"
+
+;mobile;plp_platters_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/plp_platters_mobile.jpg;plp_platters_mobile.jpg;"Order platters"
+;tablet;plp_platters_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/plp_platters_tablet.jpg;plp_platters_tablet.jpg;"Order platters"
+;desktop;plp_platters_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/plp_platters_desktop.jpg;plp_platters_desktop.jpg;"Order platters"
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;shoprite-wine-en;wine_mobile.jpg,wine_tablet.jpg,wine_desktop.jpg
+;shoprite-whisky-en;whisky_mobile.jpg,whisky_tablet.jpg,whisky_desktop.jpg
+;shoprite-baskets-en;baskets_mobile.jpg,baskets_tablet.jpg,baskets_desktop.jpg
+;shoprite-platters-en;platters_mobile.jpg,platters_tablet.jpg,platters_desktop.jpg
+;shoprite-auction-wine-en;auction_wine_mobile.jpg,auction_wine_tablet.jpg,auction_wine_desktop.jpg
+
+;shoprite-plp_baskets-en;plp_baskets_mobile.jpg,plp_baskets_tablet.jpg,plp_baskets_desktop.jpg
+;shoprite-plp_platters-en;plp_platters_mobile.jpg,plp_platters_tablet.jpg,plp_platters_desktop.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;WineGaloreBannerResponsive;shoprite-wine-en
+;;WhiskyGaloreBannerResponsive;shoprite-whisky-en
+;;PlattersGaloreBannerResponsive;shoprite-platters-en
+;;BasketsGaloreBannerResponsive;shoprite-baskets-en
+;;AuctionWineGaloreBannerResponsive;shoprite-auction-wine-en
+
+
+
+##### Section 2
+# A330
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;tablet;Elec_200x200_Category02_EN_01_200W.jpg;$siteResource/images/banners/category/responsive/Elec_200x200_Category02_EN_01_200W.jpg;Elec_200x200_Category02_EN_01_200W.jpg;"View";
+;desktop;Elec_350x350_Category02_EN_01_350W.jpg;$siteResource/images/banners/category/responsive/Elec_350x350_Category02_EN_01_350W.jpg;Elec_350x350_Category02_EN_01_350W.jpg;"View";
+
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-sony-A330-banner-en;Elec_350x350_Category02_EN_01_350W.jpg,Elec_200x200_Category02_EN_01_200W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsSonyA330BannerComponent;electronics-sony-A330-banner-en
+
+#Canon 500D
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;tablet;Elec_200x200_Category07_EN_01_200W.jpg;$siteResource/images/banners/category/responsive/Elec_200x200_Category07_EN_01_200W.jpg;Elec_200x200_Category07_EN_01_200W.jpg;"View";
+;desktop;Elec_350x350_Category07_EN_01_350W.jpg;$siteResource/images/banners/category/responsive/Elec_350x350_Category07_EN_01_350W.jpg;Elec_350x350_Category07_EN_01_350W.jpg;"View";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-canon-500D-banner-en;Elec_350x350_Category07_EN_01_350W.jpg,Elec_200x200_Category07_EN_01_200W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsCanon500DBannerComponent;electronics-canon-500D-banner-en
+
+#Canon 450D
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;tablet;Elec_200x200_Category06_EN_01_200W.jpg;$siteResource/images/banners/category/responsive/Elec_200x200_Category06_EN_01_200W.jpg;Elec_200x200_Category06_EN_01_200W.jpg;"View";
+;desktop;Elec_350x350_Category06_EN_01_350W.jpg;$siteResource/images/banners/category/responsive/Elec_350x350_Category06_EN_01_350W.jpg;Elec_350x350_Category06_EN_01_350W.jpg;"View";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-canon-450-banner-en;Elec_350x350_Category06_EN_01_350W.jpg,Elec_200x200_Category06_EN_01_200W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsCanon450DBannerComponent;electronics-canon-450-banner-en
+
+# Sony A100
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;tablet;Elec_200x200_Category05_EN_01_200W.jpg;$siteResource/images/banners/category/responsive/Elec_200x200_Category05_EN_01_200W.jpg;Elec_200x200_Category05_EN_01_200W.jpg;"View";
+;desktop;Elec_350x350_Category05_EN_01_350W.jpg;$siteResource/images/banners/category/responsive/Elec_350x350_Category05_EN_01_350W.jpg;Elec_350x350_Category05_EN_01_350W.jpg;"View";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-sony-a100-banner-en;Elec_350x350_Category05_EN_01_350W.jpg,Elec_200x200_Category05_EN_01_200W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsSonyA100HBannerComponent;electronics-sony-a100-banner-en
+
+# Sony Alpha 200
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;tablet;Elec_200x200_Category03_EN_01_200W.jpg;$siteResource/images/banners/category/responsive/Elec_200x200_Category03_EN_01_200W.jpg;Elec_200x200_Category03_EN_01_200W.jpg;"View";
+;desktop;Elec_350x350_Category03_EN_01_350W.jpg;$siteResource/images/banners/category/responsive/Elec_350x350_Category03_EN_01_350W.jpg;Elec_350x350_Category03_EN_01_350W.jpg;"View";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-sony-A200-banner-en;Elec_350x350_Category03_EN_01_350W.jpg,Elec_200x200_Category03_EN_01_200W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsSonyA200BannerComponent;electronics-sony-A200-banner-en
+
+# Sony Alpha 350
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;tablet;Elec_200x200_Category01_EN_01_200W.jpg;$siteResource/images/banners/category/responsive/Elec_200x200_Category01_EN_01_200W.jpg;Elec_200x200_Category01_EN_01_200W.jpg;"View";
+;desktop;Elec_350x350_Category01_EN_01_350W.jpg;$siteResource/images/banners/category/responsive/Elec_350x350_Category01_EN_01_350W.jpg;Elec_350x350_Category01_EN_01_350W.jpg;"View";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-sony-Alpha-350-banner-en;Elec_350x350_Category01_EN_01_350W.jpg,Elec_200x200_Category01_EN_01_200W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsSonyAlpha350BannerComponent;electronics-sony-Alpha-350-banner-en
+
+##### Section 3
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;mobile;Elec_480x118_Category10_EN_01_480W.jpg;$siteResource/images/banners/category/responsive/Elec_480x118_Category10_EN_01_480W.jpg;Elec_480x118_Category10_EN_01_480W.jpg;"Shop Now";
+;tablet;Elec_770x80_Category10_EN_01_770W.jpg;$siteResource/images/banners/category/responsive/Elec_770x80_Category10_EN_01_770W.jpg;Elec_770x80_Category10_EN_01_770W.jpg;"Shop Now";
+;desktop;Elec_1400x140_Category10_EN_01_1400W.jpg;$siteResource/images/banners/category/responsive/Elec_1400x140_Category10_EN_01_1400W.jpg;Elec_1400x140_Category10_EN_01_1400W.jpg;"Shop Now";
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;electronics-save-big-banner-en;Elec_480x118_Category10_EN_01_480W.jpg,Elec_770x80_Category10_EN_01_770W.jpg,Elec_1400x140_Category10_EN_01_1400W.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+;;ElectronicsSaveBigDLSRBannerComponent;electronics-save-big-banner-en
+
+# update linkname
+UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$lang]
+;;PersonalDetailsLink;"Update Personal Details"
+;;UpdateEmailLink;"Update Email"
+;;UpdatePasswordLink;"Update Password"
+;;OrderHistoryLink;"Order History"
+
+#update navigation node title
+UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
+;;MyAccountNavNode;"My Account"
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
+;;PageNotFoundMessage;"<table border=""1"" cellspacing=""0"" cellpadding=""10"" style=""border-color:white; margin-top: 20px;"" empty-cells: show; font-size: 12px; padding: 0px; margin-top: 4px;"">  <tbody>    <tr style=""padding: 0px; margin: 0px;"">      <td colspan=""4"" style=""vertical-align: top; text-align: left; font-weight: normal; padding: 0px; margin: 0px;"">        <div style=""background-color: white; font-size: small;padding-top: 10px;padding-right: 15px;padding-bottom: 10px;padding-left: 15px;border-bottom-width: 1px;border-top-width: 1px;margin: 0px; text-align: center;"">  <p align=""normal"" style=""margin: 10px 0 10px 0;""> Either you have hit the wrong URL or you have not entered valid store and porovince in store selector popup.
+</p>        </div>      </td>    </tr>  </tbody></table>"
