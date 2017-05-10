@@ -21,8 +21,8 @@ UPDATE CMSSite;uid[unique=true];defaultPreviewCategory(code, $productCV);default
 
 # Site Logo
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];altText;folder(qualifier)[default='images']
-;;/images/theme/logo-checkers.png;logo-checkers.png;$siteResource/images/theme/logo-checkers.png;image/png;Checkers Logo;
-;;/images/theme/logo-checkers_zh.png;logo-hybris_zh.png;$siteResource/images/theme/logo-checkers_zh.png;image/png;Checkers Logo;
+;;/images/theme/supervalu.jpg;logo-supervalu.jpg;$siteResource/images/theme/supervalu.png;image/jpg;Supervalu Logo;
+##;;/images/theme/logo-checkers_zh.png;logo-hybris_zh.png;$siteResource/images/theme/logo-checkers_zh.png;image/png;Checkers Logo;
 
 # Site Logo Component
 INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink
