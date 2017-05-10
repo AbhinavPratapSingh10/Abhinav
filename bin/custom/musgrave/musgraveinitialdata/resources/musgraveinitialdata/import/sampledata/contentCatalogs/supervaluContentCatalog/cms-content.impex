@@ -221,7 +221,7 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 ;WhiskyNavNode;;Whisky Category;ShopriteNavNode;WhiskyCategoryLink;WhiskyNavNode
 ;BasketsNavNode;;Baskets Category;ShopriteNavNode;BasketsCategoryLink;BasketsNavNode
 ;PlattersNavNode;;Platters Category;ShopriteNavNode;PlattersCategoryLink;PlattersNavNode
-;FooterNavNode;;Footer Pages;ShopriteNavNode;AboutUsLink,ShopriteHoldings,ContactUsLink,TermsAndConditionsFooterLink,PoliciesAndCareersUsLink,Careers,Checkline,News,CustomerCare,FAQLink;FooterNavNode
+;FooterNavNode;;Footer Pages;ShopriteNavNode;StoreLocatorLink,HelpLink,PrivacyLink,ContactUsLink;FooterNavNode
 ;AccountLeftNavNode;;My Account;ShopriteNavNode;AccountProfileLink,AccountOrderHistoryLink;AccountLeftNavNode
 ;AccountProfileNavNode;;Profile;AccountLeftNavNode;AccountPersonalDetailsLink,AccountUpdatePasswordLink;AccountProfileNavNode
 ;AccountAddressBookNavNode;;Address Book;AccountLeftNavNode;AccountManageAddressLink;AccountAddressBookNavNode
@@ -676,7 +676,10 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;TermsAndConditionsLink;Terms And Conditions;"http://www.checkers.co.za/Terms-and-Conditions.html";TermsAndConditionsLink;TermsAndConditionsLink;newWindow;;;
 ;;TermsAndConditionsFooterLink;Terms And Conditions for footer;"http://www.checkers.co.za/Terms-and-Conditions.html";TermsAndConditionsFooterLink;TermsAndConditionsFooterLink;newWindow;;;
 ;;PoliciesAndCareersUsLink;Policies;"http://www.checkers.co.za/policies.html";PoliciesAndCareersUsLink;PoliciesAndCareersUsLink;newWindow;;;
-;;ContactUsLink;Contact Us Link;"http://www.checkers.co.za/contactus.html";ContactUsLink;ContactUsLink;newWindow;;;
+;;ContactUsLink;Contact Us Link;"https://shop.supervalu.ie/shopping/feedback";ContactUsLink;ContactUsLink;newWindow;;;
+;;StoreLocatorLink;Store Locator Link;"https://supervalu.ie/store-locator?_ga=2.82955793.608173017.1494387906-1476210793.1494306453";StoreLocatorLink;StoreLocatorLink;newWindow
+;;HelpLink;Help Link;"https://shop.supervalu.ie/shopping/how-online-shopping-works";HelpLink;HelpLink;newWindow
+;;PrivacyLink;Privacy link;"https://shop.supervalu.ie/shopping/privacy-statement";PrivacyLink;PrivacyLink;newWindow
 
 ##Shoprite Legislative Component and restrictions##
 
