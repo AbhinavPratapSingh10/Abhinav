@@ -31,5 +31,44 @@
 					</tbody>
 				</table>
 		</c:forEach>
+		
 	</c:if>
+	<table class="table">
+			<tbody>
+				<tr>
+					<td class="attrib">Grape</td>
+					<td>${product.grape}</td>
+					
+				</tr>
+				<tr>
+					<td class="attrib">Brand</td>
+					<td>${product.brand}</td>
+					
+				</tr>
+				<tr>
+					<td class="attrib">Year</td>
+					<td>${product.year}</td>
+					
+				</tr>
+				<tr>
+					<td class="attrib">Region</td>
+					<td>${product.region}</td>
+					
+				</tr>
+				<tr>
+					<td class="attrib">Style</td>
+					<td>${product.style}</td>
+					
+				</tr>
+				<tr>
+					<td class="attrib">Goes Well With</td>
+					<td>${product.goeswellwith}</td>
+					
+				</tr>
+				<tr>
+					<td class="attrib">Tasting Notes</td>
+					<td>${product.tastingnotes}</td>
+				</tr>
+			</tbody>
+		</table>
 </div>
