@@ -102,7 +102,7 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
 
 # Media Content
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];&imageRef;folder(qualifier)[default='images'];altText
-;;wine.jpg;$siteResource/images/banners/homepage/wine.jpg;;wine.jpg;;"Order wine"
+;;wine.jpg;$siteResource/images/banners/homepage/wine-club-header.jpg;;wine.jpg;;"Order wine"
 ;;whisky.jpg;$siteResource/images/banners/homepage/whisky.jpg;;whisky.jpg;;"Order Whisky"
 ;;baskets.jpg;$siteResource/images/banners/homepage/baskets.jpg;;baskets.jpg;;"Order baskets"
 ;;platters.jpg;$siteResource/images/banners/homepage/platters.jpg;;platters.jpg;;"Order paltters"

@@ -152,9 +152,9 @@ UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[l
 
 ##### Section 1
 INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;mobile;wine_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/wine_mobile.jpg;wine_mobile.jpg;"Order wine"
-;tablet;wine_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/wine_tablet.jpg;wine_tablet.jpg;"Order wine"
-;desktop;wine_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/wine_desktop.jpg;wine_desktop.jpg;"Order wine"
+;mobile;wine_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/wine-club-header_mobile.jpg;wine_mobile.jpg;"Order wine"
+;tablet;wine_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/wine-club-header_tablet.jpg;wine_tablet.jpg;"Order wine"
+;desktop;wine_desktop.jpg;$siteResource/images/banners/category/responsive/shoprite/wine-club-header_desktop.jpg;wine_desktop.jpg;"Order wine"
 
 ;mobile;whisky_mobile.jpg;$siteResource/images/banners/category/responsive/shoprite/whisky_mobile.jpg;whisky_mobile.jpg;"Order Whisky"
 ;tablet;whisky_tablet.jpg;$siteResource/images/banners/category/responsive/shoprite/whisky_tablet.jpg;whisky_tablet.jpg;"Order Whisky"
