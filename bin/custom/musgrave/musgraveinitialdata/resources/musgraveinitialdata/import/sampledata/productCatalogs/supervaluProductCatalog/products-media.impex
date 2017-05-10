@@ -1,17 +1,8 @@
-# -----------------------------------------------------------------------
-# [y] hybris Platform
-#
-# Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
-#
-# This software is the confidential and proprietary information of SAP
-# ("Confidential Information"). You shall not disclose such Confidential
-# Information and shall use it only in accordance with the terms of the
-# license agreement you entered into with SAP.
-# -----------------------------------------------------------------------
-# ImPex for Importing Product Media
+# ImpEx for Importing Product Media into Merchandise store
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
+$productCatalog=supervaluProductCatalog
+$storeName=hybris
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
 $media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
@@ -24,13 +15,109 @@ $others=others(code, $catalogVersion)
 $data_sheet=data_sheet(code, $catalogVersion)
 $medias=medias(code, $catalogVersion)
 $galleryImages=galleryImages(qualifier, $catalogVersion)
-$siteResource=jar:com.musgrave.initialdata.setup.InitialDataSystemSetup&/musgraveinitialdata/import/productCatalogs/$productCatalog
+$siteResource=jar:com.musgrave.initialdata.setup.InitialDataSystemSetup&/musgraveinitialdata/import/sampledata/productCatalogs/$productCatalog/images
+
+INSERT_UPDATE MediaFolder;qualifier[unique=true];path[unique=true]
+;images;images
 
 # Create Media
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];$media;mime[default='image/jpg'];$catalogVersion;folder(qualifier)
+
+
+;1200Wx1200H;/1200Wx1200H/ArestiBellavistaCabernetSauvignon.jpg;$siteResource/1200Wx1200H/ArestiBellavistaCabernetSauvignon.jpg;;;images
+;515Wx515H;/515Wx515H/ArestiBellavistaCabernetSauvignon.jpg;$siteResource/515Wx515H/ArestiBellavistaCabernetSauvignon.jpg;;;images
+;300Wx300H;/300Wx300H/ArestiBellavistaCabernetSauvignon.jpg;$siteResource/300Wx300H/ArestiBellavistaCabernetSauvignon.jpg;;;images
+;96Wx96H;/96Wx96H/ArestiBellavistaCabernetSauvignon.jpg;$siteResource/96Wx96H/ArestiBellavistaCabernetSauvignon.jpg;;;images
+;65Wx65H;/65Wx65H/ArestiBellavistaCabernetSauvignon.jpg;$siteResource/65Wx65H/ArestiBellavistaCabernetSauvignon.jpg;;;images
+;30Wx30H;/30Wx30H/ArestiBellavistaCabernetSauvignon.jpg;$siteResource/30Wx30H/ArestiBellavistaCabernetSauvignon.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/BarefootCellarsPinotGrigio.jpg;$siteResource/1200Wx1200H/BarefootCellarsPinotGrigio.jpg;;;images
+;515Wx515H;/515Wx515H/BarefootCellarsPinotGrigio.jpg;$siteResource/515Wx515H/BarefootCellarsPinotGrigio.jpg;;;images
+;300Wx300H;/300Wx300H/BarefootCellarsPinotGrigio.jpg;$siteResource/300Wx300H/BarefootCellarsPinotGrigio.jpg;;;images
+;96Wx96H;/96Wx96H/BarefootCellarsPinotGrigio.jpg;$siteResource/96Wx96H/BarefootCellarsPinotGrigio.jpg;;;images
+;65Wx65H;/65Wx65H/BarefootCellarsPinotGrigio.jpg;$siteResource/65Wx65H/BarefootCellarsPinotGrigio.jpg;;;images
+;30Wx30H;/30Wx30H/BarefootCellarsPinotGrigio.jpg;$siteResource/30Wx30H/BarefootCellarsPinotGrigio.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/BarefootWine.jpg;$siteResource/1200Wx1200H/BarefootWine.jpg;;;images
+;515Wx515H;/515Wx515H/BarefootWine.jpg;$siteResource/515Wx515H/BarefootWine.jpg;;;images
+;300Wx300H;/300Wx300H/BarefootWine.jpg;$siteResource/300Wx300H/BarefootWine.jpg;;;images
+;96Wx96H;/96Wx96H/BarefootWine.jpg;$siteResource/96Wx96H/BarefootWine.jpg;;;images
+;65Wx65H;/65Wx65H/BarefootWine.jpg;$siteResource/65Wx65H/BarefootWine.jpg;;;images
+;30Wx30H;/30Wx30H/BarefootWine.jpg;$siteResource/30Wx30H/BarefootWine.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/BlossomHillRoseSparklingZin.jpg;$siteResource/1200Wx1200H/BlossomHillRoseSparklingZin.jpg;;;images
+;515Wx515H;/515Wx515H/BlossomHillRoseSparklingZin.jpg;$siteResource/515Wx515H/BlossomHillRoseSparklingZin.jpg;;;images
+;300Wx300H;/300Wx300H/BlossomHillRoseSparklingZin.jpg;$siteResource/300Wx300H/BlossomHillRoseSparklingZin.jpg;;;images
+;96Wx96H;/96Wx96H/BlossomHillRoseSparklingZin.jpg;$siteResource/96Wx96H/BlossomHillRoseSparklingZin.jpg;;;images
+;65Wx65H;/65Wx65H/BlossomHillRoseSparklingZin.jpg;$siteResource/65Wx65H/BlossomHillRoseSparklingZin.jpg;;;images
+;30Wx30H;/30Wx30H/BlossomHillRoseSparklingZin.jpg;$siteResource/30Wx30H/BlossomHillRoseSparklingZin.jpg;;;images
+
+
+;1200Wx1200H;/1200Wx1200H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;$siteResource/1200Wx1200H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;;;images
+;515Wx515H;/515Wx515H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;$siteResource/515Wx515H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;;;images
+;300Wx300H;/300Wx300H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;$siteResource/300Wx300H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;;;images
+;96Wx96H;/96Wx96H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;$siteResource/96Wx96H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;;;images
+;65Wx65H;/65Wx65H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;$siteResource/65Wx65H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;;;images
+;30Wx30H;/30Wx30H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;$siteResource/30Wx30H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/CockburnsFineRubyPort.jpg;$siteResource/1200Wx1200H/CockburnsFineRubyPort.jpg;;;images
+;515Wx515H;/515Wx515H/CockburnsFineRubyPort.jpg;$siteResource/515Wx515H/CockburnsFineRubyPort.jpg;;;images
+;300Wx300H;/300Wx300H/CockburnsFineRubyPort.jpg;$siteResource/300Wx300H/CockburnsFineRubyPort.jpg;;;images
+;96Wx96H;/96Wx96H/CockburnsFineRubyPort.jpg;$siteResource/96Wx96H/CockburnsFineRubyPort.jpg;;;images
+;65Wx65H;/65Wx65H/CockburnsFineRubyPort.jpg;$siteResource/65Wx65H/CockburnsFineRubyPort.jpg;;;images
+;30Wx30H;/30Wx30H/CockburnsFineRubyPort.jpg;$siteResource/30Wx30H/CockburnsFineRubyPort.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/MateusTheOriginalRose.jpg;$siteResource/1200Wx1200H/MateusTheOriginalRose.jpg;;;images
+;515Wx515H;/515Wx515H/MateusTheOriginalRose.jpg;$siteResource/515Wx515H/MateusTheOriginalRose.jpg;;;images
+;300Wx300H;/300Wx300H/MateusTheOriginalRose.jpg;$siteResource/300Wx300H/MateusTheOriginalRose.jpg;;;images
+;96Wx96H;/96Wx96H/MateusTheOriginalRose.jpg;$siteResource/96Wx96H/MateusTheOriginalRose.jpg;;;images
+;65Wx65H;/65Wx65H/MateusTheOriginalRose.jpg;$siteResource/65Wx65H/MateusTheOriginalRose.jpg;;;images
+;30Wx30H;/30Wx30H/MateusTheOriginalRose.jpg;$siteResource/30Wx30H/MateusTheOriginalRose.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/McGuiganFrizzante.jpg;$siteResource/1200Wx1200H/McGuiganFrizzante.jpg;;;images
+;515Wx515H;/515Wx515H/McGuiganFrizzante.jpg;$siteResource/515Wx515H/McGuiganFrizzante.jpg;;;images
+;300Wx300H;/300Wx300H/McGuiganFrizzante.jpg;$siteResource/300Wx300H/McGuiganFrizzante.jpg;;;images
+;96Wx96H;/96Wx96H/McGuiganFrizzante.jpg;$siteResource/96Wx96H/McGuiganFrizzante.jpg;;;images
+;65Wx65H;/65Wx65H/McGuiganFrizzante.jpg;$siteResource/65Wx65H/McGuiganFrizzante.jpg;;;images
+;30Wx30H;/30Wx30H/McGuiganFrizzante.jpg;$siteResource/30Wx30H/McGuiganFrizzante.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/WinterTaleAmontilladoSherry.jpg;$siteResource/1200Wx1200H/WinterTaleAmontilladoSherry.jpg;;;images
+;515Wx515H;/515Wx515H/WinterTaleAmontilladoSherry.jpg;$siteResource/515Wx515H/WinterTaleAmontilladoSherry.jpg;;;images
+;300Wx300H;/300Wx300H/WinterTaleAmontilladoSherry.jpg;$siteResource/300Wx300H/WinterTaleAmontilladoSherry.jpg;;;images
+;96Wx96H;/96Wx96H/WinterTaleAmontilladoSherry.jpg;$siteResource/96Wx96H/WinterTaleAmontilladoSherry.jpg;;;images
+;65Wx65H;/65Wx65H/WinterTaleAmontilladoSherry.jpg;$siteResource/65Wx65H/WinterTaleAmontilladoSherry.jpg;;;images
+;30Wx30H;/30Wx30H/WinterTaleAmontilladoSherry.jpg;$siteResource/30Wx30H/WinterTaleAmontilladoSherry.jpg;;;images
+
+;1200Wx1200H;/1200Wx1200H/ArestiSpecialReleaseSauvignonBlanc.jpg;$siteResource/1200Wx1200H/ArestiSpecialReleaseSauvignonBlanc.jpg;;;images
+;515Wx515H;/515Wx515H/ArestiSpecialReleaseSauvignonBlanc.jpg;$siteResource/515Wx515H/ArestiSpecialReleaseSauvignonBlanc.jpg;;;images
+;300Wx300H;/300Wx300H/ArestiSpecialReleaseSauvignonBlanc.jpg;$siteResource/300Wx300H/ArestiSpecialReleaseSauvignonBlanc.jpg;;;images
+;96Wx96H;/96Wx96H/ArestiSpecialReleaseSauvignonBlanc.jpg;$siteResource/96Wx96H/ArestiSpecialReleaseSauvignonBlanc.jpg;;;images
+;65Wx65H;/65Wx65H/ArestiSpecialReleaseSauvignonBlanc.jpg;$siteResource/65Wx65H/ArestiSpecialReleaseSauvignonBlanc.jpg;;;images
+;30Wx30H;/30Wx30H/ArestiSpecialReleaseSauvignonBlanc.jpg;$siteResource/30Wx30H/ArestiSpecialReleaseSauvignonBlanc.jpg;;;images
 
 # Create Media Containers
 INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$catalogVersion
+;1023644000.jpg;/1200Wx1200H/ArestiBellavistaCabernetSauvignon.jpg,/515Wx515H/ArestiBellavistaCabernetSauvignon.jpg,/300Wx300H/ArestiBellavistaCabernetSauvignon.jpg,/96Wx96H/ArestiBellavistaCabernetSauvignon.jpg,/65Wx65H/ArestiBellavistaCabernetSauvignon.jpg,/30Wx30H/ArestiBellavistaCabernetSauvignon.jpg
+;1440295000.jpg;/1200Wx1200H/BarossaValleyEstateGrenacheShirazMourvedre.jpg,/515Wx515H/BarossaValleyEstateGrenacheShirazMourvedre.jpg,/300Wx300H/BarossaValleyEstateGrenacheShirazMourvedre.jpg,/96Wx96H/BarossaValleyEstateGrenacheShirazMourvedre.jpg,/65Wx65H/BarossaValleyEstateGrenacheShirazMourvedre.jpg,/30Wx30H/BarossaValleyEstateGrenacheShirazMourvedre.jpg
+;1016059001.jpg;/1200Wx1200H/ArestiSpecialReleaseSauvignonBlanc.jpg,/515Wx515H/ArestiSpecialReleaseSauvignonBlanc.jpg,/300Wx300H/ArestiSpecialReleaseSauvignonBlanc.jpg,/96Wx96H/ArestiSpecialReleaseSauvignonBlanc.jpg,/65Wx65H/ArestiSpecialReleaseSauvignonBlanc.jpg,/30Wx30H/ArestiSpecialReleaseSauvignonBlanc.jpg
+;1269419000.jpg;/1200Wx1200H/BarefootCellarsPinotGrigio.jpg,/515Wx515H/BarefootCellarsPinotGrigio.jpg,/300Wx300H/BarefootCellarsPinotGrigio.jpg,/96Wx96H/BarefootCellarsPinotGrigio.jpg,/65Wx65H/BarefootCellarsPinotGrigio.jpg,/30Wx30H/BarefootCellarsPinotGrigio.jpg
+;1444579000.jpg;/1200Wx1200H/McGuiganFrizzante.jpg,/515Wx515H/McGuiganFrizzante.jpg,/300Wx300H/McGuiganFrizzante.jpg,/96Wx96H/McGuiganFrizzante.jpg,/65Wx65H/McGuiganFrizzante.jpg,/30Wx30H/McGuiganFrizzante.jpg
+;1405824000.jpg;/1200Wx1200H/BlossomHillRoseSparklingZin.jpg,/515Wx515H/BlossomHillRoseSparklingZin.jpg,/300Wx300H/BlossomHillRoseSparklingZin.jpg,/96Wx96H/BlossomHillRoseSparklingZin.jpg,/65Wx65H/BlossomHillRoseSparklingZin.jpg,/30Wx30H/BlossomHillRoseSparklingZin.jpg
+;1017027000.jpg;/1200Wx1200H/WinterTaleAmontilladoSherry.jpg,/515Wx515H/WinterTaleAmontilladoSherry.jpg,/300Wx300H/WinterTaleAmontilladoSherry.jpg,/96Wx96H/WinterTaleAmontilladoSherry.jpg,/65Wx65H/WinterTaleAmontilladoSherry.jpg,/30Wx30H/WinterTaleAmontilladoSherry.jpg
+;1005415000.jpg;/1200Wx1200H/CockburnsFineRubyPort.jpg,/515Wx515H/CockburnsFineRubyPort.jpg,/300Wx300H/CockburnsFineRubyPort.jpg,/96Wx96H/CockburnsFineRubyPort.jpg,/65Wx65H/CockburnsFineRubyPort.jpg,/30Wx30H/CockburnsFineRubyPort.jpg
+;1201595000.jpg;/1200Wx1200H/BarefootWine.jpg,/515Wx515H/BarefootWine.jpg,/300Wx300H/BarefootWine.jpg,/96Wx96H/BarefootWine.jpg,/65Wx65H/BarefootWine.jpg,/30Wx30H/BarefootWine.jpg
+;1010016001.jpg;/1200Wx1200H/MateusTheOriginalRose.jpg,/515Wx515H/MateusTheOriginalRose.jpg,/300Wx300H/MateusTheOriginalRose.jpg,/96Wx96H/MateusTheOriginalRose.jpg,/65Wx65H/MateusTheOriginalRose.jpg,/30Wx30H/MateusTheOriginalRose.jpg
+
 
 # Update Products with Media and Media Containers
-UPDATE Product;code[unique=true];$picture;$thumbnail;$detail;$others;$normal;$thumbnails;$galleryImages;$catalogVersion
+INSERT_UPDATE Product;code[unique=true];$catalogVersion;$galleryImages;$picture;$thumbnail
+;1023644000;;1023644000.jpg;/300Wx300H/ArestiBellavistaCabernetSauvignon.jpg;/96Wx96H/ArestiBellavistaCabernetSauvignon.jpg
+;1440295000;;1440295000.jpg;/300Wx300H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;/96Wx96H/BarossaValleyEstateGrenacheShirazMourvedre.jpg
+;1016059001;;1016059001.jpg;/300Wx300H/ArestiSpecialReleaseSauvignonBlanc.jpg;/96Wx96H/ArestiSpecialReleaseSauvignonBlanc.jpg
+;1269419000;;1269419000.jpg;/300Wx300H/BarefootCellarsPinotGrigio.jpg;/96Wx96H/BarefootCellarsPinotGrigio.jpg
+;1444579000;;1444579000.jpg;/300Wx300H/McGuiganFrizzante.jpg;/96Wx96H/McGuiganFrizzante.jpg
+;1405824000;;1405824000.jpg;/300Wx300H/BlossomHillRoseSparklingZin.jpg;/96Wx96H/BlossomHillRoseSparklingZin.jpg
+;1017027000;;1017027000.jpg;/300Wx300H/WinterTaleAmontilladoSherry.jpg;/96Wx96H/WinterTaleAmontilladoSherry.jpg
+;1005415000;;1005415000.jpg;/300Wx300H/CockburnsFineRubyPort.jpg;/96Wx96H/CockburnsFineRubyPort.jpg
+;1201595000;;1201595000.jpg;/300Wx300H/BarefootWine.jpg;/96Wx96H/BarefootWine.jpg
+;1010016001;;1010016001.jpg;/300Wx300H/MateusTheOriginalRose.jpg;/96Wx96H/MateusTheOriginalRose.jpg
