@@ -121,3 +121,26 @@ INSERT_UPDATE Product;code[unique=true];$catalogVersion;$galleryImages;$picture;
 ;1005415000;;1005415000.jpg;/300Wx300H/CockburnsFineRubyPort.jpg;/96Wx96H/CockburnsFineRubyPort.jpg
 ;1201595000;;1201595000.jpg;/300Wx300H/BarefootWine.jpg;/96Wx96H/BarefootWine.jpg
 ;1010016001;;1010016001.jpg;/300Wx300H/MateusTheOriginalRose.jpg;/96Wx96H/MateusTheOriginalRose.jpg
+
+INSERT_UPDATE SuperValuWineSizeVariantProduct;code[unique=true];$catalogVersion;$galleryImages;$picture;$thumbnail
+;1023644000_V1;;1023644000.jpg;/300Wx300H/ArestiBellavistaCabernetSauvignon.jpg;/96Wx96H/ArestiBellavistaCabernetSauvignon.jpg
+;1440295000_V1;;1440295000.jpg;/300Wx300H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;/96Wx96H/BarossaValleyEstateGrenacheShirazMourvedre.jpg
+;1016059001_V1;;1016059001.jpg;/300Wx300H/ArestiSpecialReleaseSauvignonBlanc.jpg;/96Wx96H/ArestiSpecialReleaseSauvignonBlanc.jpg
+;1269419000_V1;;1269419000.jpg;/300Wx300H/BarefootCellarsPinotGrigio.jpg;/96Wx96H/BarefootCellarsPinotGrigio.jpg
+;1444579000_V1;;1444579000.jpg;/300Wx300H/McGuiganFrizzante.jpg;/96Wx96H/McGuiganFrizzante.jpg
+;1405824000_V1;;1405824000.jpg;/300Wx300H/BlossomHillRoseSparklingZin.jpg;/96Wx96H/BlossomHillRoseSparklingZin.jpg
+;1017027000_V1;;1017027000.jpg;/300Wx300H/WinterTaleAmontilladoSherry.jpg;/96Wx96H/WinterTaleAmontilladoSherry.jpg
+;1005415000_V1;;1005415000.jpg;/300Wx300H/CockburnsFineRubyPort.jpg;/96Wx96H/CockburnsFineRubyPort.jpg
+;1201595000_V1;;1201595000.jpg;/300Wx300H/BarefootWine.jpg;/96Wx96H/BarefootWine.jpg
+;1010016001_V1;;1010016001.jpg;/300Wx300H/MateusTheOriginalRose.jpg;/96Wx96H/MateusTheOriginalRose.jpg
+
+;1023644000_V2;;1023644000.jpg;/300Wx300H/ArestiBellavistaCabernetSauvignon.jpg;/96Wx96H/ArestiBellavistaCabernetSauvignon.jpg
+;1440295000_V2;;1440295000.jpg;/300Wx300H/BarossaValleyEstateGrenacheShirazMourvedre.jpg;/96Wx96H/BarossaValleyEstateGrenacheShirazMourvedre.jpg
+;1016059001_V2;;1016059001.jpg;/300Wx300H/ArestiSpecialReleaseSauvignonBlanc.jpg;/96Wx96H/ArestiSpecialReleaseSauvignonBlanc.jpg
+;1269419000_V2;;1269419000.jpg;/300Wx300H/BarefootCellarsPinotGrigio.jpg;/96Wx96H/BarefootCellarsPinotGrigio.jpg
+;1444579000_V2;;1444579000.jpg;/300Wx300H/McGuiganFrizzante.jpg;/96Wx96H/McGuiganFrizzante.jpg
+;1405824000_V2;;1405824000.jpg;/300Wx300H/BlossomHillRoseSparklingZin.jpg;/96Wx96H/BlossomHillRoseSparklingZin.jpg
+;1017027000_V2;;1017027000.jpg;/300Wx300H/WinterTaleAmontilladoSherry.jpg;/96Wx96H/WinterTaleAmontilladoSherry.jpg
+;1005415000_V2;;1005415000.jpg;/300Wx300H/CockburnsFineRubyPort.jpg;/96Wx96H/CockburnsFineRubyPort.jpg
+;1201595000_V2;;1201595000.jpg;/300Wx300H/BarefootWine.jpg;/96Wx96H/BarefootWine.jpg
+;1010016001_V2;;1010016001.jpg;/300Wx300H/MateusTheOriginalRose.jpg;/96Wx96H/MateusTheOriginalRose.jpg
