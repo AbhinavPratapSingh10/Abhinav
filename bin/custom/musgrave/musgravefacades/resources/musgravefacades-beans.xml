@@ -13,6 +13,14 @@
 
 	<bean class="de.hybris.platform.commercefacades.product.data.ProductData">
 		<property name="genders" type="java.util.List&lt;com.musgrave.facades.product.data.GenderData>"/>
+		<property name="brand" type="java.lang.String"/>
+		<property name="year" type="java.lang.String"/>
+		<property name="region" type="java.lang.String"/>
+		<property name="grape" type="java.lang.String"/>
+		<property name="style" type="java.lang.String"/>
+		<property name="goeswellwith" type="java.lang.String"/>
+		<property name="tastingnotes" type="java.lang.String"/>
+		
 	</bean>
 
 	<bean class="com.musgrave.facades.product.data.GenderData">

@@ -185,4 +185,14 @@
 	</bean>
 
 	<bean id="genderData" class="com.musgrave.facades.product.data.GenderData" scope="prototype"/>
+	
+	<bean id="musgraveProductPopulator" class="com.musgrave.facades.populators.MusgraveProductPopulator" />
+		
+	
+
+	<!-- Add the apparelProductPopulator to the productConverter -->
+	<bean parent="modifyPopulatorList">
+		<property name="list" ref="productConverter"/>
+		<property name="add" ref="musgraveProductPopulator"/>
+	</bean>
 </beans>
