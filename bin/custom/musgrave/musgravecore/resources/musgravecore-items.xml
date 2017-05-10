@@ -120,10 +120,6 @@
 				<description>Extending the Product type from core.</description>
 				<deployment table="SuperValuWineProduct" typecode="11000" />
 				<attributes>
-					<attribute qualifier="country" type="java.lang.String">
-						<modifiers optional="true" read="true" write="true" search="true"/>
-						<persistence type="property" />
-					</attribute>
 					<attribute qualifier="brand" type="java.lang.String">
 						<modifiers optional="true" read="true" write="true" search="true"/>
 						<persistence type="property" />
@@ -153,6 +149,17 @@
 						<modifiers optional="true" read="true" write="true" search="true"/>
 						<persistence type="property" />
 					</attribute>					                  
+				</attributes>
+			</itemtype>
+			
+			<itemtype code="SuperValuWineSizeVariantProduct" extends="VariantProduct"
+			          autocreate="true" generate="true">
+				<attributes>
+					<attribute qualifier="size" type="java.lang.String">
+						<description>Size (Bottle/Case) of wine.</description>
+						<modifiers/>
+						<persistence type="property"/>
+					</attribute>
 				</attributes>
 			</itemtype>
 			
