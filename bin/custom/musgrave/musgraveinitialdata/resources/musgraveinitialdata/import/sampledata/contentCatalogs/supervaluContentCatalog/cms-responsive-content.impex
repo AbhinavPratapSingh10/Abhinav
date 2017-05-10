@@ -36,7 +36,7 @@ INSERT_UPDATE FooterComponent;$contentCV[unique=true];uid[unique=true];wrapAfter
 
 ###  Home page splash Slot 1  #######
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
-;;WineGaloreBannerResponsive;Wine Galore Banner;;WineGaloreBannerResponsive
+;;WineGaloreBannerResponsive;Wine Galore Banner;;WineGaloreBannerResponsive;/c/100/
 ;;WhiskyGaloreBannerResponsive;Whisky Galore Banner;;WhiskyGaloreBannerResponsive
 ;;PlattersGaloreBannerResponsive;Platters Galore Banner;;PlattersGaloreBannerResponsive
 ;;BasketsGaloreBannerResponsive;Baskets Galore Banner;;BasketsGaloreBannerResponsive
@@ -47,7 +47,7 @@ INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
 #;;Section1Slot-Homepage;true;WineGaloreBannerResponsive,WhiskyGaloreBannerResponsive,PlattersGaloreBannerResponsive,BasketsGaloreBannerResponsive,AuctionWineGaloreBannerResponsive
-;;Section1Slot-Homepage;true;PlattersGaloreBannerResponsive,BasketsGaloreBannerResponsive
+;;Section1Slot-Homepage;true;WineGaloreBannerResponsive
 
 ###  Home page slot 2A  ####
 #INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef

@@ -34,7 +34,13 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;StoreFinderLink;Store Finder Link;/store-finder;StoreFinderLink;StoreFinderLink;;;;
 ;;LoginLink;Login Link;/login;LoginLink;LoginLink;;;;
 ;;AllBrandsCategoryLink;All Brands Link;/;AllBrandsCategoryLink;AllBrandsCategoryLink;;;;
-;;WineCategoryLink;Wine Category Link;/;WineCategoryLink;WineCategoryLink;;;;
+;;WineCategoryLink;Wine Category Link;/c/100;WineCategoryLink;WineCategoryLink;;;;
+;;RedWineCategoryLink;Red Wine Category Link;/c/200;RedWineCategoryLink;RedWineCategoryLink;;;;
+;;WhiteWineCategoryLink;White Wine Category Link;/c/300;WhiteWineCategoryLink;WhiteWineCategoryLink;;;;
+;;SparklingWineCategoryLink;Sparkling Wine Category Link;/c/400;SparklingWineCategoryLink;SparklingWineCategoryLink;;;;
+;;PortandSherryWineCategoryLink;Wine Category Link;/c/500;PortandSherryWineCategoryLink;PortandSherryWineCategoryLink;;;;
+;;RoseWineCategoryLink;Wine Category Link;/c/600;RoseWineCategoryLink;RoseWineCategoryLink;;;;
+
 ;;BasketsCategoryLink;Baskets Category Link;/;BasketsCategoryLink;BasketsCategoryLink;;;;
 ;;PlattersCategoryLink;Platters Category Link;/;PlattersCategoryLink;PlattersCategoryLink;;;;
 ;;WhiskyCategoryLink;Whisky Category Link;/;WhiskyCategoryLink;WhiskyCategoryLink;;;;
@@ -61,6 +67,12 @@ INSERT_UPDATE MiniCartComponent;$contentCV[unique=true];uid[unique=true];name;&c
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];name;wrapAfter;link(uid, $contentCV);styleClass;&componentRef
 ;;WineBarComponent;Wine Bar Component;10;WineCategoryLink;;WineBarComponent
+;;RedWineBarComponent;Red Wine Bar Component;10;RedWineCategoryLink;;RedWineBarComponent
+;;WhiteWineBarComponent;White Wine Bar Component;10;WhiteWineCategoryLink;;WhiteWineBarComponent
+;;SparklingWineBarComponent;Sparkling Wine Bar Component;10;SparklingWineCategoryLink;;SparklingWineBarComponent
+;;PortandSherryWineBarComponent;Port and Sherry Wine Bar Component;10;PortandSherryWineCategoryLink;;PortandSherryWineBarComponent
+;;RoseWineBarComponent;Rose Wine Bar Component;10;RoseWineCategoryLink;;RoseWineBarComponent
+
 ;;BasketsBarComponent;Baskets Bar Component;10;BasketsCategoryLink;;BasketsBarComponent
 ;;PlattersBarComponent;Platters Bar Component;10;PlattersCategoryLink;;PlattersBarComponent
 ;;WhiskyBarComponent;Whisky Bar Component;10;WhiskyCategoryLink;;WhiskyBarComponent
@@ -79,7 +91,7 @@ INSERT_UPDATE AccountNavigationCollectionComponent;$contentCV[unique=true];uid[u
 
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarCollectionComponent;$contentCV[unique=true];uid[unique=true];name;components(uid, $contentCV);&componentRef
-;;NavBarComponent;Navigation Bar Collection Componeent;WineBarComponent,BasketsBarComponent,PlattersBarComponent,WhiskyBarComponent;NavBarComponent
+;;NavBarComponent;Navigation Bar Collection Componeent;WineBarComponent;NavBarComponent
 
 # CMS tabs components
 #INSERT_UPDATE CMSTabParagraphComponent;$contentCV[unique=true];uid[unique=true];name;visible;&componentRef
@@ -199,6 +211,13 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 ;SiteRootNode;;SiteRootNode;root;;SiteRootNode
 ;ShopriteNavNode;;Shoprite Site;SiteRootNode;HomepageNavLink;ShopriteNavNode
 ;WineNavNode;;Wine Category;;WineCategoryLink;WineNavNode
+;RedWineNavNode;;Red Wine Category;;RedWineCategoryLink;RedWineNavNode
+;WhiteWineNavNode;;White Wine Category;;WhiteWineCategoryLink;WhiteWineNavNode
+;SparklingWineNavNode;;Sparkling Wine Category;;SparklingWineCategoryLink;SparklingWineNavNode
+;PortandSherryWineNavNode;;Port and Sherry Wine Category;;PortandSherryWineCategoryLink;PortandSherryWineNavNode
+;RoseWineNavNode;;Rose Wine Category;;RoseWineCategoryLink;RoseWineNavNode
+
+
 ;WhiskyNavNode;;Whisky Category;ShopriteNavNode;WhiskyCategoryLink;WhiskyNavNode
 ;BasketsNavNode;;Baskets Category;ShopriteNavNode;BasketsCategoryLink;BasketsNavNode
 ;PlattersNavNode;;Platters Category;ShopriteNavNode;PlattersCategoryLink;PlattersNavNode
@@ -214,6 +233,11 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];navigationNode(&nodeRef);dropDownLayout(code)
 ;;WineBarComponent;WineNavNode
+;;RedWineBarComponent;RedWineNavNode
+;;WhiteWineBarComponent;WhiteWineNavNode
+;;SparklingWineBarComponent;SparklingWineNavNode
+;;PortandSherryWineBarComponent;PortandSherryWineNavNode
+;;RoseWineBarComponent;RoseWineNavNode
 ;;PlattersBarComponent;PlattersNavNode
 ;;BasketsBarComponent;BasketsNavNode
 ;;WhiskyBarComponent;WhiskyNavNode
@@ -304,7 +328,7 @@ INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=
 
 INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink
 ;;BrandsGaloreBanner;Brands Galore Banner;BrandsGaloreBanner;/Brands/c/brands
-;;WineGaloreBanner;Wine Galore Banner;WineGaloreBanner;
+;;WineGaloreBanner;Wine Galore Banner;WineGaloreBanner;/c/100/
 ;;WhiskyGaloreBanner;Whisky Galore Banner;WhiskyGaloreBanner;
 ;;PlattersGaloreBanner;Platters Galore Banner;PlattersGaloreBanner;
 ;;BasketsGaloreBanner;Baskets Galore Banner;BasketsGaloreBanner;
@@ -314,7 +338,7 @@ INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];nam
 ;;NextDayDeliveryBanner;Next Day Delivery Banner;NextDayDeliveryBanner
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-;;Section1Slot-Homepage;Section1 Slot for Homepage;true;WineGaloreBanner,WhiskyGaloreBanner,PlattersGaloreBanner,BasketsGaloreBanner,AuctionWineGaloreBanner
+;;Section1Slot-Homepage;Section1 Slot for Homepage;true;WineGaloreBanner
 ;;Section2ASlot-Homepage;Section2A Slot for Homepage;true;
 ;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;
 ;;Section2CSlot-Homepage;Section2C Slot for Homepage;true;
@@ -745,7 +769,7 @@ INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];na
 
 # Navigation Bar Component
 INSERT_UPDATE NavigationBarCollectionComponent;$contentCV[unique=true];uid[unique=true];name;components(uid, $contentCV);&componentRef
-;;NavBarComponent;Navigation Bar Collection Componeent;PlattersBarComponent,BasketsBarComponent,AuctionWineBarComponent,WineBarComponent;NavBarComponent 
+;;NavBarComponent;Navigation Bar Collection Componeent;WineBarComponent,RedWineBarComponent,WhiteWineBarComponent,SparklingWineBarComponent,PortandSherryWineBarComponent,RoseWineBarComponent;NavBarComponent 
 
 
 # CMS tabs components for wine and whisky 
