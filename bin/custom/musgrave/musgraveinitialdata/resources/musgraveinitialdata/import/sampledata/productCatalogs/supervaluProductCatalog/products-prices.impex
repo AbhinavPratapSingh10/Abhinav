@@ -11,12 +11,26 @@
 # ImpEx for Importing Prices
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
 
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default='$productCatalog:Staged']
 $prices=Europe1prices[translator=de.hybris.platform.europe1.jalo.impex.Europe1PricesTranslator]
 
-# Set product approval status to Approved only for those products that have prices.
-$approved=approvalstatus(code)[default='approved']
 
-UPDATE Product;code[unique=true];$prices;$approved;$catalogVersion;Europe1PriceFactory_PTG(code)
+
+$productCatalog=supervaluProductCatalog
+
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default='$productCatalog:Staged']
+
+# price rows
+
+INSERT_UPDATE PriceRow;product(code,$catalogVersion)[unique=true];price;unit(code);minQtd;unitFactor;currency(isocode)[unique=true];$catalogVersion;
+
+;1023644000;11;bottles;1;1;ZAR;;
+;1440295000;19;bottles;1;1;ZAR;;
+;1016059001;9;bottles;1;1;ZAR;;
+;1269419000;18;bottles;1;1;ZAR;;
+;1444579000;16;bottles;1;1;ZAR;;
+;1405824000;8;bottles;1;1;ZAR;;
+;1017027000;9;bottles;1;1;ZAR;;
+;1005415000;7;bottles;1;1;ZAR;;
+;1201595000;12;bottles;1;1;ZAR;;
+;1010016001;15;bottles;1;1;ZAR;;
