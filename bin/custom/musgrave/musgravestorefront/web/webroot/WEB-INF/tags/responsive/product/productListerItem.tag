@@ -17,7 +17,7 @@
 <li class="product__list--item">
 	<ycommerce:testId code="test_searchPage_wholeProduct">
 		
-		<a class="product__list--thumb" href="${productUrl}" title="${fn:escapeXml(product.name)}" />">
+		<a class="product__list--thumb" href="${productUrl}" title="${fn:escapeXml(product.name)}" >
 			<product:productPrimaryImage product="${product}" format="thumbnail"/>
 		</a>
 		<ycommerce:testId code="searchPage_productName_link_${product.code}">
