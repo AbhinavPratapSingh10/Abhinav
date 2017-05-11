@@ -33,6 +33,7 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;HomepageNavLink;Home Page Nav Link;/;HomepageNavLink;HomepageNavLink;;;;
 ;;StoreFinderLink;Store Finder Link;/store-finder;StoreFinderLink;StoreFinderLink;;;;
 ;;LoginLink;Login Link;/login;LoginLink;LoginLink;;;;
+;;EasterLink;Easter Link;/easterPage;EasterLink;EasterLink;;;;
 ;;AllBrandsCategoryLink;All Brands Link;/;AllBrandsCategoryLink;AllBrandsCategoryLink;;;;
 ;;WineCategoryLink;Wine Category Link;/c/100;WineCategoryLink;WineCategoryLink;;;;
 ;;RedWineCategoryLink;Red Wine Category Link;/c/200;RedWineCategoryLink;RedWineCategoryLink;;;;
@@ -72,6 +73,7 @@ INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];na
 ;;SparklingWineBarComponent;Sparkling Wine Bar Component;10;SparklingWineCategoryLink;;SparklingWineBarComponent
 ;;PortandSherryWineBarComponent;Port and Sherry Wine Bar Component;10;PortandSherryWineCategoryLink;;PortandSherryWineBarComponent
 ;;RoseWineBarComponent;Rose Wine Bar Component;10;RoseWineCategoryLink;;RoseWineBarComponent
+;;EasterWineBarComponent;Easter Wine Bar Component;10;EasterLink;;EasterWineBarComponent
 
 ;;BasketsBarComponent;Baskets Bar Component;10;BasketsCategoryLink;;BasketsBarComponent
 ;;PlattersBarComponent;Platters Bar Component;10;PlattersCategoryLink;;PlattersBarComponent
@@ -835,3 +837,58 @@ INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
 ;;ProductGridSlot;Product Grid Slot for Product List;true;PlattersPLPGaloreBannerResponsive,BasketsPLPGaloreBannerResponsive,ProductGridComponent,LegislativeMessage,WineDisclaimerMessage,DisclaimerMessage,DisclaimerFruitBasketMessage,DisclaimerAuctionWineMessage;;;
+
+
+# Navigation Bar Component
+
+INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];name;wrapAfter;link(uid, $contentCV);styleClass;&componentRef
+;;EasterWineBarComponent;Easter Wine Bar Component;10;EasterLink;;EasterWineBarComponent
+
+# Navigation Bar Component
+INSERT_UPDATE NavigationBarCollectionComponent;$contentCV[unique=true];uid[unique=true];name;components(uid, $contentCV);&componentRef
+;;NavBarComponent;Navigation Bar Collection Componeent;WineBarComponent,BasketsBarComponent,PlattersBarComponent,WhiskyBarComponent,EasterWineBarComponent;NavBarComponent
+
+# Navigation Bar Component
+INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];navigationNode(&nodeRef);dropDownLayout(code)
+;;EasterWineBarComponent;EasterWineNavNode
+
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;&linkRef;&componentRef;target(code)[default='sameWindow'];$category;$product;
+;;EasterLink;Easter Wines;/easterPage;EasterLink;EasterLink;newWindow;;;
+
+# CMS Navigation Nodes
+INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
+;EasterWineNavNode;;Easter Wine;;EasterLink;EasterWineNavNode
+
+# Navigation Bar Component
+INSERT_UPDATE NavigationBarComponent;$contentCV[unique=true];uid[unique=true];navigationNode(&nodeRef);dropDownLayout(code)
+;;EasterWineBarComponent;EasterWineNavNode
+
+# Navigation Bar Component
+INSERT_UPDATE NavigationBarCollectionComponent;$contentCV[unique=true];uid[unique=true];name;components(uid, $contentCV);&componentRef
+;;NavBarComponent;Navigation Bar Collection Componeent;WineBarComponent,RedWineBarComponent,WhiteWineBarComponent,SparklingWineBarComponent,PortandSherryWineBarComponent,RoseWineBarComponent,EasterWineBarComponent;NavBarComponent 
+
+
+## Easter Banner
+$medias=medias(code, $contentCV)
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+;mobile;easter-wine_mobile.jpg;$siteResource/images/banners/category/responsive/easter-wine_mobile.jpg;easter-wine_mobile.jpg;"Easter Wines"
+;tablet;easter-wine_tablet.jpg;$siteResource/images/banners/category/responsive/easter-wine_tablet.jpg;easter-wine_tablet.jpg;"Easter Wines"
+;desktop;easter-wine_desktop.jpg;$siteResource/images/banners/category/responsive/easter-wine_desktop.jpg;easter-wine_desktop.jpg;"Easter Wines"
+
+UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=en]
+;;EasterLink;"Easter Wines" 
+
+INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+;supervalu-easter-wine-en;easter-wine_mobile.jpg,easter-wine_tablet.jpg,easter-wine_desktop.jpg
+
+INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer;&componentRef
+;;EasterWineBannerResponsive;supervalu-easter-wine-en;EasterWineBannerResponsive
+
+# ContentSlot 
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
+;;Section2BSlot-EasterWine;Section2B Slot for EasterWine Page;true;EasterWineBannerResponsive;;;
+
+# ContentSlotForPage 
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='easterPage'];contentSlot(uid,$contentCV)[unique=true];;;
+;;Section2BSlot-EasterWine;Section2B;;Section2BSlot-EasterWine;;;
+

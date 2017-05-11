@@ -151,16 +151,17 @@ SELECT DISTINCT tbl.pk, tbl.code FROM (
 		SELECT DISTINCT {p:PK} AS pk, {p:code} AS code, {p:varianttype} AS varianttype
 		FROM {Product AS p LEFT JOIN CustomerReview AS cr ON {cr:product}={p:PK} }
 		WHERE {p:modifiedtime} >= ?lastIndexTime OR {cr:modifiedtime} >= ?lastIndexTime
+		AND {isVinegar}=false
 	}}
 	UNION
 	{{
-		SELECT {p:PK}  AS pk, {p:code} AS code, {p:varianttype} AS varianttype FROM {Product AS p} WHERE {p:code} IN (
+		SELECT {p:PK}  AS pk, {p:code} AS code, {p:varianttype} AS varianttype FROM {Product AS p} WHERE {isVinegar}=false AND {p:code}  IN (
 			{{
 				SELECT DISTINCT {sl:productCode} FROM {StockLevel AS sl} WHERE {sl:modifiedtime} >= ?lastIndexTime
 			}}
 		)
 	}}
-) tbl WHERE {isVinegar}=false and (tbl.varianttype IS NULL OR tbl.varianttype NOT IN ( {{ SELECT {PK} FROM {varianttype} WHERE {code} = 'SuperValuWineSizeVariantProduct'}}) ) 
+) tbl WHERE (tbl.varianttype IS NULL OR tbl.varianttype NOT IN ( {{ SELECT {PK} FROM {varianttype} WHERE {code} = 'SuperValuWineSizeVariantProduct'}}) ) 
       AND tbl.code NOT IN({{ SELECT {code} FROM {GenericVariantProduct} }}) ORDER BY tbl.code
 ";anonymous
 
