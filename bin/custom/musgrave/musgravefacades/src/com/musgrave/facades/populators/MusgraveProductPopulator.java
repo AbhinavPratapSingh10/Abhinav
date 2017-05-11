@@ -37,7 +37,7 @@ public class MusgraveProductPopulator implements Populator<ProductModel, Product
 			target.setGrape(supervaluProduct.getGrape());
 			target.setYear(supervaluProduct.getYear());
 			target.setGoeswellwith(supervaluProduct.getGoeswellwith());
-			target.setTastingnotes(supervaluProduct.getGoeswellwith());
+			target.setTastingnotes(supervaluProduct.getTastingnotes());
 			target.setStyle(supervaluProduct.getStyle());
 		}
 

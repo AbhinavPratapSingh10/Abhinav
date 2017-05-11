@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+<editor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="editor.xsd">
+	
+	<group qualifier="General" visible="true" initially-opened="true">
+		<label key="cockpit.config.label.General" />
+		<property qualifier="superValuWineProduct.code" />
+		<property qualifier="superValuWineProduct.name" />
+		<property qualifier="superValuWineProduct.catalogversion"  editor="shortListEditor"/>
+		<property qualifier="superValuWineProduct.approvalStatus" />
+		<property qualifier="superValuWineProduct.onlineDate" />
+		<property qualifier="superValuWineProduct.offlineDate" />
+		<property qualifier="superValuWineProduct.unit" />
+		<property qualifier="superValuWineProduct.ean" />
+		<property qualifier="superValuWineProduct.description" editor="wysiwyg"/>
+		<property qualifier="superValuWineProduct.summary" />
+		<property qualifier="superValuWineProduct.brand" />
+		<property qualifier="superValuWineProduct.year" />
+		<property qualifier="superValuWineProduct.region" />
+		<property qualifier="superValuWineProduct.grape" />
+		<property qualifier="superValuWineProduct.style" />
+		<property qualifier="superValuWineProduct.goeswellwith" />
+		<property qualifier="superValuWineProduct.tastingnotes" />
+		
+		
+	</group>
+
+	<custom-group 
+		class="de.hybris.platform.cockpit.services.config.impl.ClassAttrEditorSectionConfiguration" 
+		qualifier="classification"
+		initially-opened="false"
+		show-if-empty="false">
+		<label key="config.general.attributes" />
+	</custom-group>
+
+	<group qualifier="Category" visible="true" initially-opened="false">
+		<label key="config.general.categorysystem" />
+		<property qualifier="superValuWineProduct.supercategories"/>
+		<property qualifier="superValuWineProduct.productReferences" editor="browserContextEditor"/>
+	</group>
+
+	<group qualifier="Price" visible="true" initially-opened="false">
+		<label key="config.general.prices" />
+		<property qualifier="superValuWineProduct.europe1Prices"  editor="browserContextEditor"/>
+		<property qualifier="superValuWineProduct.Europe1PriceFactory_PPG" />
+		<property qualifier="superValuWineProduct.europe1Discounts"  editor="browserContextEditor"/>
+		<property qualifier="superValuWineProduct.Europe1PriceFactory_PTG"  visible="false"/>
+		<property qualifier="superValuWineProduct.Europe1PriceFactory_PDG"  visible="false"/>
+		<property qualifier="superValuWineProduct.minOrderQuantity"  visible="false"/>
+		<property qualifier="superValuWineProduct.maxOrderQuantity"  visible="false"/>
+	</group>
+
+	<custom-group spring-bean="externalTaxesSection" 
+		qualifier="superValuWineProduct.externalTaxes" initially-opened="false" visible="true">
+		<label key="musgravecockpits.product.externalTaxes" />
+	</custom-group>
+
+	<group qualifier="Multimedia" visible="true" initially-opened="false">
+		<label key="config.general.multimedia" />
+		<property qualifier="superValuWineProduct.galleryImages"/>
+		<property qualifier="superValuWineProduct.picture" editor="simpleMediaReferenceSelector">
+			<parameter>
+				<name>mimeTypes</name>
+				<value>image/jpeg;image/gif;image/png</value>
+			</parameter>
+			<parameter>
+				<name>celumMediaFormat</name>
+				<value>picture</value>
+			</parameter>
+			<parameter>
+				<name>allowCreate</name>
+				<value>true</value>
+			</parameter>
+			<parameter>
+				<name>imageHeight</name>
+				<value>80px</value>
+			</parameter>
+			<parameter>
+				<name>restrictToCreateTypes</name>
+				<value>Media,CelumAsset+</value>
+			</parameter>
+			<parameter>
+				<name>predefinedValuesStrategy</name>
+				<value>imageMediaPredefinedValuesStrategy</value>
+			</parameter>
+		</property>
+
+		<property qualifier="superValuWineProduct.thumbnail" editor="simpleMediaReferenceSelector">
+			<parameter>
+				<name>mimeTypes</name>
+				<value>image/jpeg;image/gif;image/png</value>
+			</parameter>
+			<parameter>
+				<name>celumMediaFormat</name>
+				<value>thumbnail</value>
+			</parameter>
+			<parameter>
+				<name>allowCreate</name>
+				<value>true</value>
+			</parameter>
+			<parameter>
+				<name>restrictToCreateTypes</name>
+				<value>Media,CelumAsset+</value>
+			</parameter>
+			<parameter>
+				<name>predefinedValuesStrategy</name>
+				<value>imageMediaPredefinedValuesStrategy</value>
+			</parameter>
+		</property>
+		<property qualifier="superValuWineProduct.data_sheet" editor="celumMediaReferenceCollectionSelector">
+			<parameter>
+				<name>allowCreate</name>
+				<value>true</value>
+			</parameter>
+			<parameter>
+				<name>celumMediaFormat</name>
+				<value>picture</value>
+			</parameter>
+		</property>
+		<property qualifier="superValuWineProduct.detail" editor="celumMediaReferenceCollectionSelector">
+			<parameter>
+				<name>allowCreate</name>
+				<value>true</value>
+			</parameter>
+			<parameter>
+				<name>celumMediaFormat</name>
+				<value>picture</value>
+			</parameter>
+			<parameter>
+				<name>restrictToCreateTypes</name>
+				<value>Media,CelumAsset+</value>
+			</parameter>
+		</property>
+		<property qualifier="superValuWineProduct.logo" editor="celumMediaReferenceCollectionSelector">
+			<parameter>
+				<name>allowCreate</name>
+				<value>true</value>
+			</parameter>
+			<parameter>
+				<name>celumMediaFormat</name>
+				<value>picture</value>
+			</parameter>
+			<parameter>
+				<name>restrictToCreateTypes</name>
+				<value>Media,CelumAsset+</value>
+			</parameter>
+		</property>
+		<property qualifier="superValuWineProduct.normal" editor="celumMediaReferenceCollectionSelector">
+			<parameter>
+				<name>allowCreate</name>
+				<value>true</value>
+			</parameter>
+			<parameter>
+				<name>celumMediaFormat</name>
+				<value>picture</value>
+			</parameter>
+			<parameter>
+				<name>restrictToCreateTypes</name>
+				<value>Media,CelumAsset+</value>
+			</parameter>
+		</property>
+		<property qualifier="superValuWineProduct.others" editor="celumMediaReferenceCollectionSelector">
+			<parameter>
+				<name>allowCreate</name>
+				<value>true</value>
+			</parameter>
+			<parameter>
+				<name>celumMediaFormat</name>
+				<value>picture</value>
+			</parameter>
+		</property>
+		<property qualifier="superValuWineProduct.thumbnails" editor="celumMediaReferenceCollectionSelector">
+			<parameter>
+				<name>allowCreate</name>
+				<value>true</value>
+			</parameter>
+			<parameter>
+				<name>celumMediaFormat</name>
+				<value>thumbnail</value>
+			</parameter>
+			<parameter>
+				<name>restrictToCreateTypes</name>
+				<value>Media,CelumAsset+</value>
+			</parameter>
+		</property>
+	</group>
+
+	<group qualifier="variants" visible="false" initially-opened="false">
+		<label key="config.general.variants" />
+		<property qualifier="superValuWineProduct.variantType">
+			<parameter>
+				<name>allowCreate</name>
+				<value>false</value>
+			</parameter>
+		</property>
+		<property qualifier="superValuWineProduct.variants"  editor="browserContextEditor"/>
+	</group>
+
+	<group qualifier="additional" visible="true" initially-opened="false">
+		<label key="cockpit.config.label.Additional" />
+		
+		<property qualifier="superValuWineProduct.manufacturerAID" />
+		<property qualifier="superValuWineProduct.manufacturerName" />
+		<property qualifier="superValuWineProduct.deliveryTime"  visible="false"/>
+		<property qualifier="superValuWineProduct.contentUnit" />
+		<property qualifier="superValuWineProduct.numberContentUnits"  visible="false"/>
+		<property qualifier="superValuWineProduct.remarks" />
+		<property qualifier="superValuWineProduct.keywords"  editor="multi"/>
+	</group>
+
+
+	<group qualifier="bmecat" visible="true" initially-opened="false">
+		<label key="config.general.bmecat" />
+		<property qualifier="superValuWineProduct.manufacturertypeDescription" />
+		<property qualifier="superValuWineProduct.supplierAlternativeAID" />
+		<property qualifier="superValuWineProduct.erpGroupBuyer" />
+		<property qualifier="superValuWineProduct.erpGroupSupplier" />
+		<property qualifier="superValuWineProduct.segment" />
+		<property qualifier="superValuWineProduct.order" />
+		<property qualifier="superValuWineProduct.orderQuantityInterval" />
+	</group>
+	
+	<custom-group 
+		spring-bean="CommentsSection"
+		qualifier="comments"
+		initially-opened="false"
+		visible="true">
+		<label key="config.general.comments" />
+	</custom-group>
+
+	<group qualifier="admin" visible="true" initially-opened="false">
+		<label key="config.general.administration" />
+		<property qualifier="Item.pk" />
+		<property qualifier="Item.creationTime" />
+		<property qualifier="Item.modifiedtime" />
+		<property qualifier="Item.assignedCockpitItemTemplates"/>
+	</group>
+
+	
+	<custom-group 
+		class="de.hybris.platform.cockpit.services.config.impl.UnassignedEditorSectionConfiguration" 
+		qualifier="unassigned"
+		initially-opened="false"
+		visible="false">
+		<label key="cockpit.config.label.Other" />
+	</custom-group>
+
+	
+</editor>
