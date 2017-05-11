@@ -57,6 +57,15 @@
 		<property name="rootCategory" value="brands"/>
 		<!-- 'brands' is the root of the brands hierarchy -->
 	</bean>
+	
+	<bean id="musgraveCategorySource" parent="abstractCategorySource">
+		<property name="rootCategory" value="1"/>
+		<!-- '1' is the root icecat category -->
+	</bean>
+	<bean id="musgraveBrandCategorySource" parent="abstractCategorySource">
+		<property name="rootCategory" value="brands"/>
+		<!-- 'brands' is the root of the brands hierarchy -->
+	</bean>
 
 	<bean id="apparelCategorySource" parent="abstractCategorySource">
 		<property name="rootCategory" value="categories"/>
@@ -83,17 +92,17 @@
 		<property name="commonI18NService" ref="commonI18NService"/>
 	</bean>
 
-	<bean id="electronicsCategoryCodeValueProvider" parent="abstractCategoryCodeValueProvider">
-		<property name="categorySource" ref="electronicsCategorySource"/>
+	<bean id="musgraveCategoryCodeValueProvider" parent="abstractCategoryCodeValueProvider">
+		<property name="categorySource" ref="musgraveCategorySource"/>
 	</bean>
-	<bean id="electronicsBrandCategoryCodeValueProvider" parent="abstractCategoryCodeValueProvider">
-		<property name="categorySource" ref="electronicsBrandCategorySource"/>
+	<bean id="musgraveBrandCategoryCodeValueProvider" parent="abstractCategoryCodeValueProvider">
+		<property name="categorySource" ref="musgraveBrandCategorySource"/>
 	</bean>
-	<bean id="electronicsCategoryNameValueProvider" parent="abstractCategoryNameValueProvider">
-		<property name="categorySource" ref="electronicsCategorySource"/>
+	<bean id="musgraveCategoryNameValueProvider" parent="abstractCategoryNameValueProvider">
+		<property name="categorySource" ref="musgraveCategorySource"/>
 	</bean>
-	<bean id="electronicsBrandCategoryNameValueProvider" parent="abstractCategoryNameValueProvider">
-		<property name="categorySource" ref="electronicsBrandCategorySource"/>
+	<bean id="musgraveBrandCategoryNameValueProvider" parent="abstractCategoryNameValueProvider">
+		<property name="categorySource" ref="musgraveBrandCategorySource"/>
 	</bean>
 
 	<bean id="apparelCategoryCodeValueProvider" parent="abstractCategoryCodeValueProvider">
@@ -482,5 +491,11 @@
 	<import resource="/musgravecore/processes/quote/quote-buyer-process-spring.xml"/>
 	<import resource="/musgravecore/processes/quote/quote-salesrep-process-spring.xml"/>
 	<import resource="/musgravecore/processes/quote/quote-seller-approval-process-spring.xml"/>
+	
+	<bean id="countryNameValueProvider" class="com.musgrave.core.solrfacetsearchProvider.CountryNameValueProvider"
+	      parent="abstractPropertyFieldValueProvider" >
+		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
+		<property name="commonI18NService" ref="commonI18NService"/>
+	</bean>
 	
 </beans>
