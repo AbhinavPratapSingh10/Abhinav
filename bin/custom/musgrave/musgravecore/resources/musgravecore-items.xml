@@ -127,6 +127,15 @@
 		
 		<typegroup name="SuperValu">
 		
+		<itemtype code="Product" autocreate="false" generate="false">
+			<attributes>
+			<attribute qualifier="isVinegar" type="java.lang.Boolean">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<defaultvalue>false</defaultvalue>
+						<persistence type="property" />
+			</attribute>
+			</attributes>
+		</itemtype>
 		<itemtype code="SuperValuWineProduct" extends="Product"
 				autocreate="true" generate="true">
 				<description>Extending the Product type from core.</description>
@@ -161,11 +170,8 @@
 						<modifiers optional="true" read="true" write="true" search="true"/>
 						<persistence type="property" />
 					</attribute>
-					<attribute qualifier="isVinegar" type="java.lang.Boolean">
-						<modifiers optional="true" read="true" write="true" search="true"/>
-						<defaultvalue>false</defaultvalue>
-						<persistence type="property" />
-					</attribute>					                  
+					
+										                  
 				</attributes>
 			</itemtype>
 			
@@ -177,6 +183,7 @@
 						<modifiers/>
 						<persistence type="property"/>
 					</attribute>
+					
 				</attributes>
 			</itemtype>
 			
