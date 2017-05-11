@@ -134,14 +134,7 @@
 						<defaultvalue>false</defaultvalue>
 						<persistence type="property" />
 			</attribute>
-			</attributes>
-		</itemtype>
-		<itemtype code="SuperValuWineProduct" extends="Product"
-				autocreate="true" generate="true">
-				<description>Extending the Product type from core.</description>
-				<deployment table="SuperValuWineProduct" typecode="11000" />
-				<attributes>
-					<attribute qualifier="brand" type="java.lang.String">
+			<attribute qualifier="brand" type="java.lang.String">
 						<modifiers optional="true" read="true" write="true" search="true"/>
 						<persistence type="property" />
 					</attribute>
@@ -158,10 +151,7 @@
 						<defaultvalue>true</defaultvalue>
 						<persistence type="property" />
 					</attribute>
-					<attribute qualifier="style" type="java.lang.String">
-						<modifiers optional="true" read="true" write="true" search="true"/>
-						<persistence type="property" />
-					</attribute>
+					
 					<attribute qualifier="goeswellwith" type="java.lang.String">
 						<modifiers optional="true" read="true" write="true" search="true"/>
 						<persistence type="property" />
@@ -170,9 +160,20 @@
 						<modifiers optional="true" read="true" write="true" search="true"/>
 						<persistence type="property" />
 					</attribute>
-					
-										                  
+			
+			</attributes>
+		</itemtype>
+		<itemtype code="SuperValuWineProduct" extends="Product"
+				autocreate="true" generate="true">
+				<description>Extending the Product type from core.</description>
+				<deployment table="SuperValuWineProduct" typecode="11000" />
+				<attributes>
+					<attribute qualifier="style" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<persistence type="property" />
+					</attribute>
 				</attributes>
+				
 			</itemtype>
 			
 			<itemtype code="SuperValuWineSizeVariantProduct" extends="VariantProduct"
