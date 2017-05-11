@@ -34,6 +34,8 @@ import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Required;
 
+import com.musgrave.core.model.SuperValuWineProductModel;
+
 
 /**
  * Category code value provider. Value provider that generates field values for category codes. This implementation uses
@@ -72,35 +74,51 @@ public class CountryNameValueProvider extends AbstractPropertyFieldValueProvider
 	public Collection<FieldValue> getFieldValues(final IndexConfig indexConfig, final IndexedProperty indexedProperty,
 			final Object model) throws FieldValueProviderException
 	{
-		final Collection<CountryModel> countries = countryDao.findCountries();
-		if (countries != null && !countries.isEmpty())
+		SuperValuWineProductModel supervalueProduct = null;
+		if (model instanceof SuperValuWineProductModel)
 		{
-			final Collection<FieldValue> fieldValues = new ArrayList<FieldValue>();
-
-			if (indexedProperty.isLocalized())
-			{
-				final Collection<LanguageModel> languages = indexConfig.getLanguages();
-				for (final LanguageModel language : languages)
-				{
-					for (final CountryModel country : countries)
-					{
-						fieldValues.addAll(createFieldValue(country, language, indexedProperty));
-					}
-				}
-			}
-			else
-			{
-				for (final CountryModel country : countries)
-				{
-					fieldValues.addAll(createFieldValue(country, null, indexedProperty));
-				}
-			}
-			return fieldValues;
+			supervalueProduct = (SuperValuWineProductModel) model;
 		}
 		else
 		{
 			return Collections.emptyList();
 		}
+
+		final List<CountryModel> listCountries = supervalueProduct.getCountry();
+		for (final CountryModel country : listCountries)
+		{
+			final Collection<CountryModel> countries = countryDao.findCountriesByCode(country.getIsocode());
+			if (countries != null && !countries.isEmpty())
+			{
+				final Collection<FieldValue> fieldValues = new ArrayList<FieldValue>();
+
+				if (indexedProperty.isLocalized())
+				{
+					final Collection<LanguageModel> languages = indexConfig.getLanguages();
+					for (final LanguageModel language : languages)
+					{
+
+						fieldValues.addAll(createFieldValue(country, language, indexedProperty));
+
+					}
+				}
+				else
+				{
+
+					fieldValues.addAll(createFieldValue(country, null, indexedProperty));
+
+				}
+				return fieldValues;
+			}
+			else
+			{
+				return Collections.emptyList();
+			}
+		}
+
+		return Collections.emptyList();
+
+
 	}
 
 	protected List<FieldValue> createFieldValue(final CountryModel country, final LanguageModel language,
