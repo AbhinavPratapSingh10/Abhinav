@@ -3,12 +3,17 @@
     <path dir='${HYBRIS_BIN_DIR}' autoload='false' />
 	<path dir='C:\\musgrave\\hybris\\Abhinav\\bin\\custom' autoload='false' />
     <extension name='mcc' />
+    <extension name='hmc' />
+    <extension name='platformhmc' />
+    <extension name='solrfacetsearchhmc' />
+    <extension name='commercesearchhmc' />
+    
     <extension name='commercesearchbackoffice' />
     <extension name='commerceservicesbackoffice' />
     <extension name='solrfacetsearchbackoffice' />
     <extension name='solrserver' />
-    <extension name='electronicsstore' />
-    <extension name='apparelstore' />
+    <!-- <extension name='electronicsstore' /> -->
+    <!-- <extension name='apparelstore' /> -->
     <extension name='liveeditaddon' />
     <extension name='acceleratorwebservicesaddon' />
     <extension name='orderselfserviceaddon' />
