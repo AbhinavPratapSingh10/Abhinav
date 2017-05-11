@@ -142,7 +142,7 @@ INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[
 # Create the queries that will be used to extract data for Solr
 INSERT_UPDATE SolrIndexerQuery;solrIndexedType(identifier)[unique=true];identifier[unique=true];type(code);injectCurrentDate[default=true];injectCurrentTime[default=true];injectLastIndexTime[default=true];query;user(uid)
 ;$solrIndexedType;$searchIndexNamePrefix-fullQuery;full;;;false;"
-SELECT {PK} FROM {Product} WHERE ({varianttype} IS NULL OR {varianttype} NOT IN ( {{ SELECT {PK} FROM {varianttype} WHERE {code} = 'ElectronicsColorVariantProduct'}}) ) 
+SELECT {PK} FROM {Product} WHERE {isVinegar}=false and ( {varianttype} IS NULL OR {varianttype} NOT IN ( {{ SELECT {PK} FROM {varianttype} WHERE {code} = 'ElectronicsColorVariantProduct'}}) ) 
 							AND {code} NOT IN( {{ SELECT {code} FROM {GenericVariantProduct} }})";anonymous
 
 ;$solrIndexedType;$searchIndexNamePrefix-updateQuery;update;;;;"
@@ -160,7 +160,7 @@ SELECT DISTINCT tbl.pk, tbl.code FROM (
 			}}
 		)
 	}}
-) tbl WHERE (tbl.varianttype IS NULL OR tbl.varianttype NOT IN ( {{ SELECT {PK} FROM {varianttype} WHERE {code} = 'ElectronicsColorVariantProduct'}}) ) 
+) tbl WHERE {isVinegar}=false and (tbl.varianttype IS NULL OR tbl.varianttype NOT IN ( {{ SELECT {PK} FROM {varianttype} WHERE {code} = 'ElectronicsColorVariantProduct'}}) ) 
       AND tbl.code NOT IN({{ SELECT {code} FROM {GenericVariantProduct} }}) ORDER BY tbl.code
 ";anonymous
 
