@@ -30,6 +30,8 @@
 		<property qualifier="superValuWineProduct.style" />
 		<property qualifier="superValuWineProduct.goeswellwith" />
 		<property qualifier="superValuWineProduct.tastingnotes" />
+		<property qualifier="superValuWineProduct.isVinegar" />
+		
 		
 		
 	</group>
