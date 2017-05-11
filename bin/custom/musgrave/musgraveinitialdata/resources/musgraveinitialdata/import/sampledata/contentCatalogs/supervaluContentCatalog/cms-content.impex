@@ -665,7 +665,7 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
 ;;RightContentSlot-checkout-login;RightContentSlot;;RightContentSlot-checkout-login;;;
 
 UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=en]
-;;WineCategoryLink;"Wines"
+;;WineCategoryLink;"All Wines"
 ;;PlattersCategoryLink;"Platters"
 ;;WhiskyCategoryLink;"Whisky"
 ;;BasketsCategoryLink;"Fruit Baskets"
