@@ -148,7 +148,6 @@
 					</attribute>
 					<attribute qualifier="grape" type="java.lang.String">
 						<modifiers optional="true" read="true" write="true" search="true"/>
-						<defaultvalue>true</defaultvalue>
 						<persistence type="property" />
 					</attribute>
 					
