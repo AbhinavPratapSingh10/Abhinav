@@ -160,6 +160,11 @@
 					<attribute qualifier="tastingnotes" type="java.lang.String">
 						<modifiers optional="true" read="true" write="true" search="true"/>
 						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="isVinegar" type="java.lang.Boolean">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<defaultvalue>false</defaultvalue>
+						<persistence type="property" />
 					</attribute>					                  
 				</attributes>
 			</itemtype>

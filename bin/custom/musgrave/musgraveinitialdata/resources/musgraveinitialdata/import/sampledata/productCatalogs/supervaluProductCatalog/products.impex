@@ -39,24 +39,24 @@ INSERT_UPDATE SuperValuWineProduct;code[unique=true];varianttype(code);$supercat
 
 
 # Create SuperValuWineSizeVariantProduct variants
-INSERT_UPDATE SuperValuWineSizeVariantProduct;code[unique=true];$catalogVersion;$baseProduct;unit(code);size;supercategories(code,$catalogVersion);$approved;name[lang=$lang]
-;1023644000_V1;;1023644000;bottles;bottle;100,200;;"Aresti Bellavista Cabernet Sauvignon (75 Centilitre)- Per Bottle"
-;1023644000_V2;;1023644000;bottles;case;100,200;;"Aresti Bellavista Cabernet Sauvignon (75 Centilitre)- Per Case"
-;1440295000_V1;;1440295000;bottles;bottle;100,200;;"Barossa Valley Estate Grenache Shiraz Mourvedre (75 Centilitre)- Per Bottle"
-;1440295000_V2;;1440295000;bottles;case;100,200;;"Barossa Valley Estate Grenache Shiraz Mourvedre (75 Centilitre)- Per Case"
-;1016059001_V1;;1016059001;bottles;bottle;100,300;;"Aresti Special Release Sauvignon Blanc (75 Centilitre)- Per Bottle"
-;1016059001_V2;;1016059001;bottles;case;100,300;;"Aresti Special Release Sauvignon Blanc (75 Centilitre)- Per Case"
-;1269419000_V1;;1269419000;bottles;bottle;100,300;;"Barefoot Cellars Pinot Grigio (75 Centilitre)- Per Bottle"
-;1269419000_V2;;1269419000;bottles;case;100,300;;"Barefoot Cellars Pinot Grigio (75 Centilitre)- Per Case"
-;1444579000_V1;;1444579000;bottles;bottle;100,400;;"McGuigan Frizzante (75 Centilitre)- Per Bottle"
-;1444579000_V2;;1444579000;bottles;case;100,400;;"McGuigan Frizzante (75 Centilitre)- Per Case"
-;1405824000_V1;;1405824000;bottles;bottle;100,400;;"Blossom Hill Rose Sparkling Zinfandel (75 Centilitre)- Per Bottle"
-;1405824000_V2;;1405824000;bottles;case;100,400;;"Blossom Hill Rose Sparkling Zinfandel (75 Centilitre)- Per Case"
-;1017027000_V1;;1017027000;bottles;bottle;100,500;;"A Winter's Tale Amontillado Sherry (750 Millilitre)- Per Bottle"
-;1017027000_V2;;1017027000;bottles;case;100,500;;"A Winter's Tale Amontillado Sherry (750 Millilitre)- Per Case"
-;1005415000_V1;;1005415000;bottles;bottle;100,500;;"Cockburns Fine Ruby Port (75 Centilitre)- Per Bottle"
-;1005415000_V2;;1005415000;bottles;case;100,500;;"Cockburns Fine Ruby Port (75 Centilitre)- Per Case"
-;1201595000_V1;;1201595000;bottles;bottle;100,600;;"Barefoot Wine (75 Centilitre)- Per Bottle"
-;1201595000_V2;;1201595000;bottles;case;100,600;;"Barefoot Wine (75 Centilitre)- Per Case"
-;1010016001_V1;;1010016001;bottles;bottle;100,600;;"Mateus The Original Rosé (75 Centilitre)- Per Bottle"
-;1010016001_V2;;1010016001;bottles;case;100,600;;"Mateus The Original Rosé (75 Centilitre)- Per Case"
+INSERT_UPDATE SuperValuWineSizeVariantProduct;code[unique=true];$catalogVersion;$baseProduct;unit(code);size;supercategories(code,$catalogVersion);$approved;name[lang=$lang];isVinegar
+;1023644000_V1;;1023644000;bottles;bottle;100,200;;"Aresti Bellavista Cabernet Sauvignon (75 Centilitre) - Per Bottle";false
+;1023644000_V2;;1023644000;bottles;case;100,200;;"Aresti Bellavista Cabernet Sauvignon (75 Centilitre) - Per Case";false
+;1440295000_V1;;1440295000;bottles;bottle;100,200;;"Barossa Valley Estate Grenache Shiraz Mourvedre (75 Centilitre) - Per Bottle";false
+;1440295000_V2;;1440295000;bottles;case;100,200;;"Barossa Valley Estate Grenache Shiraz Mourvedre (75 Centilitre) - Per Case";false
+;1016059001_V1;;1016059001;bottles;bottle;100,300;;"Aresti Special Release Sauvignon Blanc (75 Centilitre) - Per Bottle";false
+;1016059001_V2;;1016059001;bottles;case;100,300;;"Aresti Special Release Sauvignon Blanc (75 Centilitre) - Per Case";false
+;1269419000_V1;;1269419000;bottles;bottle;100,300;;"Barefoot Cellars Pinot Grigio (75 Centilitre) - Per Bottle";false
+;1269419000_V2;;1269419000;bottles;case;100,300;;"Barefoot Cellars Pinot Grigio (75 Centilitre) - Per Case";false
+;1444579000_V1;;1444579000;bottles;bottle;100,400;;"McGuigan Frizzante (75 Centilitre) - Per Bottle";false
+;1444579000_V2;;1444579000;bottles;case;100,400;;"McGuigan Frizzante (75 Centilitre) - Per Case";false
+;1405824000_V1;;1405824000;bottles;bottle;100,400;;"Blossom Hill Rose Sparkling Zinfandel (75 Centilitre) - Per Bottle";false
+;1405824000_V2;;1405824000;bottles;case;100,400;;"Blossom Hill Rose Sparkling Zinfandel (75 Centilitre) - Per Case";false
+;1017027000_V1;;1017027000;bottles;bottle;100,500;;"A Winter's Tale Amontillado Sherry (750 Millilitre) - Per Bottle";false
+;1017027000_V2;;1017027000;bottles;case;100,500;;"A Winter's Tale Amontillado Sherry (750 Millilitre) - Per Case";false
+;1005415000_V1;;1005415000;bottles;bottle;100,500;;"Cockburns Fine Ruby Port (75 Centilitre) - Per Bottle";false
+;1005415000_V2;;1005415000;bottles;case;100,500;;"Cockburns Fine Ruby Port (75 Centilitre) - Per Case";false
+;1201595000_V1;;1201595000;bottles;bottle;100,600;;"Barefoot Wine (75 Centilitre) - Per Bottle";false
+;1201595000_V2;;1201595000;bottles;case;100,600;;"Barefoot Wine (75 Centilitre) - Per Case";false
+;1010016001_V1;;1010016001;bottles;bottle;100,600;;"Mateus The Original Rosé (75 Centilitre) - Per Bottle";false
+;1010016001_V2;;1010016001;bottles;case;100,600;;"Mateus The Original Rosé (75 Centilitre) - Per Case";true
