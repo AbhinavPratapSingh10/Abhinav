@@ -45,4 +45,4 @@ INSERT_UPDATE Tax;code[unique=true];value;currency(isocode);name[lang=en]
 ;eu-vat-full;20;EUR;"EU VAT Tax"
 
 INSERT_UPDATE TaxRow;$catalogVersion;tax(code)[unique=true];pg(code)[unique=true];ug(code)[unique=true]
-;;sa-vat-full;sa-vat-full;sa-taxes
+;;eu-vat-full;eu-vat-full;eu-taxes
