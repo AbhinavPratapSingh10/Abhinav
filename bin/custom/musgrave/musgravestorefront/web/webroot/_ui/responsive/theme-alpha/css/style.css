@@ -18018,3 +18018,221 @@ select[multiple].input-sm {
   margin-right: 3px;
   top: 4px;
 }
+#addToCartButton {
+  background-color: #3fb44b;
+}
+.add_to_cart_form .btn-primary {
+  background-color: #3fb44b;
+}
+.product_listing .price {
+  color: #a71931;
+}
+.product__listing .product__list--price-panel {
+  text-align: right;
+  font-weight: bold;
+  font-size: 21px;
+  color: #a71931;
+}
+.navigation.navigation--top {
+  background-color: #a71931;
+}
+.navigation.navigation--top {
+  background-color: #a71931;
+}
+.navigation--top .nav__right .nav__links--account li {
+  color: white;
+}
+footer {
+  padding-top: 50px;
+  margin-top: 30px;
+  background: #a71931;
+  color: #ffffff;
+  font-weight: 300;
+}
+.navigation--bottom {
+  background-color: black !important;
+  border-bottom: 1px solid black !important;
+}
+.footer__right .footer__dropdown .form-control {
+  background-color: #a71931;
+}
+.footer-bottom {
+  background-color: black !important;
+  background: #a71931 !important;
+}
+.footer__copyright {
+  background: #a71931 !important;
+  padding: 25px 0;
+  color: #ffffff;
+  text-align: center;
+}
+qty-selector input-group js-qty-selector {
+  background-color: #a71931;
+}
+input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+  background-color: #a71931 !important;
+}
+.btn .btn-default .js-qty-selector-plus {
+  background: #a71931 !important;
+}
+.js-pickup-in-store-button {
+  background-color: #3fb44b;
+}
+#findStoresNearMeAjax {
+  background-color: #3fb44b;
+}
+.add-to-cart-button {
+  background-color: #3fb44b;
+}
+.js-mini-cart-close-button {
+  background-color: #3fb44b;
+}
+.js-continue-shopping-button {
+  background-color: #3fb44b;
+}
+.js-continue-checkout-button {
+  background-color: #3fb44b;
+}
+.cart-voucher__btn {
+  background-color: #3fb44b;
+}
+.item__list--header li {
+  background-color: #3fb44b !important;
+}
+.item__name {
+  color: #a71931 !important;
+}
+.facet__text a {
+  color: #a71931 !important;
+}
+.js-pickup-in-store-button:hover {
+  background-color: #3fb44b;
+}
+.alert neutral a {
+  color: #a71931 !important;
+}
+.cart-top-bar a.help .glyphicon {
+  color: #a71931 !important;
+}
+.text-right .js-cart-help a {
+  color: #a71931 !important;
+}
+.js-save-cart-link {
+  color: #a71931 !important;
+}
+.breadcrumb a {
+  color: #a71931 !important;
+}
+.js-cart-help {
+  color: #a71931 !important;
+}
+.js-writeReviewTab {
+  color: #a71931 !important;
+}
+.js-review-write-toggle {
+  background-color: #3fb44b !important;
+}
+.tabs .tabs-list li a {
+  color: #a71931 !important;
+}
+.a2a_dd share {
+  color: #a71931 !important;
+}
+.share {
+  color: #a71931 !important;
+}
+.btn-default {
+  background-color: #3fb44b !important;
+  border-color: #3fb44b !important;
+}
+.btn-default:hover {
+  background-color: #3fb44b !important;
+  border-color: #3fb44b !important;
+}
+.btn-group .glyphicon-option-vertical {
+  color: #3fb44b !important;
+}
+.js-continue-checkout-button:hover {
+  background-color: #3fb44b !important;
+}
+.mini-cart-price {
+  color: #a71931 !important;
+}
+.dropdown-toggle {
+  background-color: transparent !important;
+}
+.mini-cart-icon {
+  color: #a71931 !important;
+}
+.nav-items-total {
+  color: #a71931 !important;
+}
+.nav-location a {
+  color: #a71931 !important;
+}
+.glyphicon-map-marker {
+  color: #a71931 !important;
+}
+.mini-cart-checkout-button {
+  background-color: #3fb44b !important;
+}
+.cart-voucher__btn:hover {
+  background-color: #3fb44b !important;
+}
+.export__cart--link {
+  color: #a71931 !important;
+}
+.js-facet-change-link {
+  color: #a71931 !important;
+}
+.ProductListComponent-ListPickUpInStoreAction .glyphicon-map-marker {
+  color: white!Important;
+}
+.add-to-cart-button:hover {
+  background-color: #3fb44b !important;
+}
+.neutral a {
+  color: #a71931 !important;
+}
+.AddToCart-PickUpInStoreAction .js-pickup-in-store-button {
+  color: white!important;
+}
+.btn-primary {
+  background-color: #3fb44b !important;
+}
+.js-secondaryNavAccount ul li a {
+  background-color: black !important;
+}
+.js-secondaryNavAccount {
+  background-color: black !important;
+}
+.name a {
+  color: #a71931 !important;
+}
+.js-checkout-step {
+  background-color: #a71931 !important;
+}
+.termsAndConditionsLink {
+  color: #a71931 !important;
+}
+.js-password-forgotten {
+  color: #a71931 !important;
+}
+.well-single-headline{
+	background-color: #a71931 !important;
+}
+.well-tertiary{
+	background-color: #a71931 !important;
+}
+.well-headline{
+	background-color: #a71931 !important;
+}
+.account-orderhistory-table-head th{
+	background-color: #3fb44b !important;
+}
+.orderhistory-list-table .responsive-table-item .responsive-table-link{
+	color: #a71931 !important;
+}
