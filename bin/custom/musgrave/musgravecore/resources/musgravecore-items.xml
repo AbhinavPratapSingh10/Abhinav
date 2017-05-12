@@ -35,17 +35,6 @@
 			<value code="YELLOW"/>
 		</enumtype>
 	</enumtypes>
-	
-	<relations>
-		<relation code="ProductCountryRelation" generate="true"
-			localized="false" autocreate="true">
-			<deployment table="ProductCountryRelation" typecode="11002" />
-			<sourceElement qualifier="product" type="SuperValuWineProduct"
-				cardinality="many" />
-			<targetElement qualifier="country" type="Country"
-				cardinality="many" collectiontype="list" />
-		</relation>
-	</relations>
 
 
 	<itemtypes>
@@ -156,6 +145,10 @@
 						<persistence type="property" />
 					</attribute>
 					<attribute qualifier="tastingnotes" type="java.lang.String">
+						<modifiers optional="true" read="true" write="true" search="true"/>
+						<persistence type="property" />
+					</attribute>
+					<attribute qualifier="origincountry" type="java.lang.String">
 						<modifiers optional="true" read="true" write="true" search="true"/>
 						<persistence type="property" />
 					</attribute>
