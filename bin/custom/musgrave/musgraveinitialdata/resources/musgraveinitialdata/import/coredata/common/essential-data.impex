@@ -100,28 +100,29 @@ INSERT_UPDATE MediaFormat;qualifier[unique=true]
 
 # Tax & Tax Groups
 INSERT_UPDATE UserTaxGroup;code[unique=true]
-;de-taxes
-;jp-taxes
-;uk-taxes
-;us-taxes
-;ca-taxes
+#;de-taxes
+#;jp-taxes
+#;uk-taxes
+#;us-taxes
+#;ca-taxes
+;eu-taxes
 
 INSERT_UPDATE ProductTaxGroup;code[unique=true]
-;jp-vat-full
+#;jp-vat-full
 ;eu-vat-full
-;eu-vat-half
-;us-sales-tax-full
-;ca-sales-tax-full
+#;eu-vat-half
+#;us-sales-tax-full
+#;ca-sales-tax-full
 
 INSERT_UPDATE Tax;code[unique=true];value;currency(isocode)
-;de-vat-full;19
-;de-vat-half;7
-;jp-vat-full;5
-;uk-vat-full;20
-;eu-vat-full;20
-;uk-vat-half;5
-;us-sales-tax-full;0
-;ca-sales-tax-full;0
+#;de-vat-full;19
+#;de-vat-half;7
+#;jp-vat-full;5
+#;uk-vat-full;20
+;eu-vat-full;20;EUR
+#;uk-vat-half;5
+#;us-sales-tax-full;0
+#;ca-sales-tax-full;0
 
 INSERT_UPDATE ServicelayerJob;code[unique=true];springId[unique=true]
 ;cartRemovalJob;cartRemovalJob

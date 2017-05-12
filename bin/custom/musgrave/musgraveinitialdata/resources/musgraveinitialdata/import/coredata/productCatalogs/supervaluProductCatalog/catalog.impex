@@ -34,14 +34,15 @@ INSERT_UPDATE CatalogVersion;catalog(id)[unique=true];version[unique=true];activ
 INSERT_UPDATE ClassificationSystemVersion;catalog(id)[unique=true];version[unique=true];active;inclPacking[virtual=true,default=true];inclDuty[virtual=true,default=true];inclFreight[virtual=true,default=true];inclAssurance[virtual=true,default=true]
 ;$classificationCatalog;1.0;true
 
-# Create default tax row for all products in product catalog
-INSERT_UPDATE TaxRow;$catalogVersion;tax(code)[unique=true];pg(code)[unique=true];ug(code)[unique=true]
-;;jp-vat-full;jp-vat-full;jp-taxes
+# Tax & Tax Groups
+INSERT_UPDATE UserTaxGroup;code[unique=true];name[lang=en]
+;eu-taxes;"EU Vat Tax"
+
+INSERT_UPDATE ProductTaxGroup;code[unique=true];name[lang=en]
+;eu-vat-full;"EU Vat Full"
+
+INSERT_UPDATE Tax;code[unique=true];value;currency(isocode);name[lang=en]
+;eu-vat-full;20;EUR;"EU VAT Tax"
 
 INSERT_UPDATE TaxRow;$catalogVersion;tax(code)[unique=true];pg(code)[unique=true];ug(code)[unique=true]
-;;de-vat-full;eu-vat-full;de-taxes
-;;de-vat-half;eu-vat-half;de-taxes
-;;eu-vat-full;eu-vat-full;uk-taxes
-;;uk-vat-half;eu-vat-half;uk-taxes
-;;us-sales-tax-full;eu-vat-full;us-taxes
-;;ca-sales-tax-full;eu-vat-full;ca-taxes
+;;sa-vat-full;sa-vat-full;sa-taxes
