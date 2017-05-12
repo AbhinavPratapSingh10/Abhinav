@@ -118,6 +118,7 @@ INSERT_UPDATE Tax;code[unique=true];value;currency(isocode)
 ;de-vat-half;7
 ;jp-vat-full;5
 ;uk-vat-full;20
+;eu-vat-full;20
 ;uk-vat-half;5
 ;us-sales-tax-full;0
 ;ca-sales-tax-full;0
