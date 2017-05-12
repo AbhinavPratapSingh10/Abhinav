@@ -492,10 +492,10 @@
 	<import resource="/musgravecore/processes/quote/quote-salesrep-process-spring.xml"/>
 	<import resource="/musgravecore/processes/quote/quote-seller-approval-process-spring.xml"/>
 	
-	<bean id="countryNameValueProvider" class="com.musgrave.core.solrfacetsearchProvider.CountryNameValueProvider"
+	<!-- <bean id="countryNameValueProvider" class="com.musgrave.core.solrfacetsearchProvider.CountryNameValueProvider"
 	      parent="abstractPropertyFieldValueProvider" >
 		<property name="fieldNameProvider" ref="solrFieldNameProvider"/>
 		<property name="commonI18NService" ref="commonI18NService"/>
-	</bean>
+	</bean> -->
 	
 </beans>
