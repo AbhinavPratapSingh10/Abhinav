@@ -57,7 +57,7 @@ INSERT_UPDATE PromotionGroup;Identifier[unique=true];
 
 # Base Store
 INSERT_UPDATE BaseStore;uid[unique=true];catalogs(id);currencies(isocode);net;taxGroup(code);storelocatorDistanceUnit(code);defaultCurrency(isocode);languages(isocode);defaultLanguage(isocode);deliveryCountries(isocode);submitOrderProcessCode;pickupInStoreMode(code);customerAllowedToIgnoreSuggestions;paymentProvider;expressCheckoutEnabled;maxRadiusForPoSSearch;checkoutFlowGroup;createReturnProcessCode;
-;$storeUid;$productCatalog,$classificationCatalog;$currencies;$net;jp-taxes;km;$defaultCurrency;$languages;$defaultLanguage;$deliveryCountries;$orderProcessCode;$pickupInStoreMode;$customerAllowedToIgnoreSuggestions;$paymentProvider;$expressCheckoutEnabled;300;$checkoutFlowGroup;$returnProcessCode;
+;$storeUid;$productCatalog,$classificationCatalog;$currencies;$net;eu-taxes;km;$defaultCurrency;$languages;$defaultLanguage;$deliveryCountries;$orderProcessCode;$pickupInStoreMode;$customerAllowedToIgnoreSuggestions;$paymentProvider;$expressCheckoutEnabled;300;$checkoutFlowGroup;$returnProcessCode;
 
 INSERT_UPDATE BaseStore2DeliveryModeRel;source(uid)[unique=true];target(code)[unique=true]
 ;supervalu;premium-net
