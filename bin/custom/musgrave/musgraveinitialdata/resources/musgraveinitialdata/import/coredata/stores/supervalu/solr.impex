@@ -130,7 +130,7 @@ INSERT_UPDATE SolrIndexedProperty;solrIndexedType(identifier)[unique=true];name[
 ;$solrIndexedType; brand         	;string;;;Refine		;Alpha; 5000;true;;
 ;$solrIndexedType; region         	;string;;;Refine		;Alpha; 5000;true;;
 ;$solrIndexedType; grape         	;string;;;Refine		;Alpha; 5000;true;;
-;$solrIndexedType; country         	;string;;;Refine		;Alpha; 5000;true;;countryNameValueProvider
+;$solrIndexedType; origincountry   	;string;;;Refine		;Alpha; 5000;true;;
 
 
 # Other facet properties
