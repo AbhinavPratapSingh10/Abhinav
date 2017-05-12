@@ -20,7 +20,7 @@ INSERT_UPDATE Warehouse;code[unique=true];name;vendor(code)[default=default];def
 
 INSERT_UPDATE BaseStore2WarehouseRel;source(uid)[unique=true];target(code)[unique=true]
 ;$storeUid;warehouseSupervalu
-INSERT_UPDATE PointOfService;name[unique=true];displayName;warehouses(code);address(&addrID);latitude;longitude;geocodeTimestamp[dateformat=dd.MM.yyyy];type(code)[default=WAREHOUSE]
+INSERT_UPDATE PointOfService;name[unique=true];displayName;warehouses(code);address(&addrID);latitude;longitude;geocodeTimestamp[dateformat=dd.MM.yyyy];type(code)[default=WAREHOUSE];basestore(uid)[default=$storeUid]
 ;warehouseSupervalu;Supervalu warehouse;warehouseSupervalu;warehouseSupervalu;48,15149;11,61823;29.05.2025
 
 
