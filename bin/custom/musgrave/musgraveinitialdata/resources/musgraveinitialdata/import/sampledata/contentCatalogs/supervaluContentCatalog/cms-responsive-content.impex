@@ -886,12 +886,13 @@ INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique
 
 # ContentSlot 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
-;;Section2BSlot-EasterWine;Section2B Slot for EasterWine Page;true;EasterWineBannerResponsive;;;
+;;Section2BSlot-EasterWine;Section2B Slot for EasterWine Page;true;;;;
+;;Section1Slot-EasterWine;Section1 Slot for EasterWine Page;true;EasterWineBannerResponsive;;;
 
 # ContentSlotForPage 
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='easterPage'];contentSlot(uid,$contentCV)[unique=true];;;
 ;;Section2BSlot-EasterWine;Section2B;;Section2BSlot-EasterWine;;;
-
+;;Section1Slot-EasterWine;Section1;;Section1Slot-EasterWine;;;
 
 
 $contentCatalog=supervaluContentCatalog
@@ -1236,8 +1237,9 @@ INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;c
 
 
 INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV);scroll(code);popup;&componentRef
-;;EasterProductCarouselComponent;Easter Product Carousel;1023644000_V1,1440295000_V1,1016059001_V1,1269419000_V1,1444579000_V1;allVisible;false;EasterProductCarouselComponent
+;;EasterProductCarouselComponent;Easter Product Carousel;1023644000_V1,1440295000_V1,1016059001_V1,1269419000_V1,1444579000_V1,1440295000_V2,1016059001_V2;allVisible;false;EasterProductCarouselComponent
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)
-;;Section2BSlot-EasterWine;EasterWineBannerResponsive,EasterProductCarouselComponent
+;;Section2BSlot-EasterWine;
+;;Section1Slot-EasterWine;EasterWineBannerResponsive,EasterProductCarouselComponent
 
